@@ -1,0 +1,27 @@
+Rohan Shah
+Email: rohan.shah@example.com | Phone: +44 7700 900998
+LinkedIn: linkedin.com/in/rohan-shah-28
+
+SUMMARY
+Data analyst with 1 year of experience in pharmaceutical sales analysis. Has built a territory sales model. Strengths include clear written communication. Enjoys improving how teams use data.
+
+EXPERIENCE
+Data Analyst, Corvex Logistics | Apr 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+- Designed dashboards for regional managers
+
+EDUCATION
+BA Economics | Westmere College | 2024 | Lower Second (2:2)
+
+SKILLS
+SQL, Excel, Python, Dashboards
+
+ACTIVITIES
+- Captain, Men's Cricket Team
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 04/02/2002
+Gender: Male

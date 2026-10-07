@@ -1,0 +1,26 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900753
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 3 years of experience in food retail sales. They have built a survey analysis pipeline. Their strengths include clear written communication. They enjoy finding patterns in customer behaviour.
+
+EXPERIENCE
+Data Analyst, Northwind Retail | Nov 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Ironmere Manufacturing | Apr 2023 to Oct 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BSc Economics | [INSTITUTION] | 2022 | Upper Second (2:1)
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre

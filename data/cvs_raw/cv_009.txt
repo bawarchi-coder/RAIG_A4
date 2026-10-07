@@ -1,0 +1,28 @@
+Mr. James Fletcher
+Email: james.fletcher@example.com | Phone: +44 7700 900464
+LinkedIn: linkedin.com/in/james-fletcher-76
+
+SUMMARY
+He is a data analyst with 1 year of experience in manufacturing quality analysis. He has built a defect trend tracker. His strengths include clear written communication. He enjoys finding patterns in customer behaviour.
+
+EXPERIENCE
+Data Analyst, Vantora Energy | Dec 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+- Designed dashboards for regional managers
+- Owned weekly KPI reporting for the leadership team
+
+EDUCATION
+BCom | University of Ashford | 2024 | CGPA 7.4/10
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting
+
+ACTIVITIES
+- Member, Data Science Society
+- Salesman, Corner Street Market (summer job)
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 25/10/2002

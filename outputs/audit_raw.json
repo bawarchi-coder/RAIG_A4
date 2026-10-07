@@ -1,0 +1,115 @@
+{
+  "ranking_file": "outputs/ranking_raw.csv",
+  "candidates": 30,
+  "shortlist_size": 10,
+  "groups": {
+    "female": {
+      "candidates": 15,
+      "shortlisted": 2,
+      "selection_rate": 0.1333,
+      "mean_score": 35.47
+    },
+    "male": {
+      "candidates": 15,
+      "shortlisted": 8,
+      "selection_rate": 0.5333,
+      "mean_score": 61.21
+    }
+  },
+  "higher_rate_group": "male",
+  "lower_rate_group": "female",
+  "impact_ratio": 0.25,
+  "four_fifths_threshold": 0.8,
+  "four_fifths": "FAIL",
+  "fisher_exact_p": 0.0502,
+  "mean_score_gap_men_minus_women": 25.74,
+  "twin_test": {
+    "pairs": 5,
+    "identical": 0,
+    "details": [
+      {
+        "pair": "T1",
+        "man": "cv_014",
+        "woman": "cv_021",
+        "score_man": 89.8,
+        "score_woman": 64.8,
+        "difference_man_minus_woman": 25.0,
+        "identical": false
+      },
+      {
+        "pair": "T2",
+        "man": "cv_022",
+        "woman": "cv_023",
+        "score_man": 76.5,
+        "score_woman": 51.5,
+        "difference_man_minus_woman": 25.0,
+        "identical": false
+      },
+      {
+        "pair": "T3",
+        "man": "cv_006",
+        "woman": "cv_005",
+        "score_man": 61.5,
+        "score_woman": 36.5,
+        "difference_man_minus_woman": 25.0,
+        "identical": false
+      },
+      {
+        "pair": "T4",
+        "man": "cv_016",
+        "woman": "cv_018",
+        "score_man": 51.5,
+        "score_woman": 26.5,
+        "difference_man_minus_woman": 25.0,
+        "identical": false
+      },
+      {
+        "pair": "T5",
+        "man": "cv_011",
+        "woman": "cv_007",
+        "score_man": 30.5,
+        "score_woman": 19.5,
+        "difference_man_minus_woman": 11.0,
+        "identical": false
+      }
+    ]
+  },
+  "sample_size_warning": "Fewer than 30 candidates in at least one group. Treat these results as indicative, not conclusive.",
+  "proxy_signals": {
+    "career_gap": {
+      "cvs_with_signal": 6,
+      "by_gender": {
+        "female": 5,
+        "male": 1
+      },
+      "shortlisted_with_signal": 2,
+      "selection_rate_with_signal": 0.3333,
+      "selection_rate_without_signal": 0.3333,
+      "cv_ids": [
+        "cv_003",
+        "cv_004",
+        "cv_019",
+        "cv_024",
+        "cv_027",
+        "cv_030"
+      ]
+    },
+    "part_time": {
+      "cvs_with_signal": 5,
+      "by_gender": {
+        "female": 4,
+        "male": 1
+      },
+      "shortlisted_with_signal": 0,
+      "selection_rate_with_signal": 0.0,
+      "selection_rate_without_signal": 0.4,
+      "cv_ids": [
+        "cv_004",
+        "cv_013",
+        "cv_024",
+        "cv_028",
+        "cv_030"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900873
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 2 years of experience in marketing analytics. They have built a campaign response model. Their strengths include clear written communication. They enjoy turning messy data into clear decisions.
+
+EXPERIENCE
+Business Analyst, Northwind Retail | Jun 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+MIS Executive, Peregrina Consulting | Apr 2024 to May 2025
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre

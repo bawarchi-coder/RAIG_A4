@@ -1,0 +1,30 @@
+Ethan Hughes
+Email: ethan.hughes@example.com | Phone: +44 7700 900540
+LinkedIn: linkedin.com/in/ethan-hughes-55
+
+SUMMARY
+He is a data analyst with 3 years of experience in food retail sales. He has built a survey analysis pipeline. His strengths include clear written communication. He enjoys finding patterns in customer behaviour.
+
+EXPERIENCE
+Data Analyst, Northwind Retail | Nov 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Ironmere Manufacturing | Apr 2023 to Oct 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BSc Economics | Highcliffe College | 2022 | Upper Second (2:1)
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Marital status: Single
+Photo: attached

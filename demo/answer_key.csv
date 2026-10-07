@@ -1,0 +1,31 @@
+cv_id,gender,profile,twin_pair_id,career_break,part_time,name
+cv_001,male,P03,,,,Arjun Verma
+cv_002,male,P09,,,,Varun Fletcher
+cv_003,female,P04,,maternity leave and childcare,,Hannah Rao
+cv_004,female,P03,,maternity leave,yes,Sneha Clarke
+cv_005,female,P08,T3,,,Laura Khan
+cv_006,male,P08,T3,,,Ethan Hughes
+cv_007,female,P14,T5,,,Fatima Desai
+cv_008,male,P04,,,,Daniel Sharma
+cv_009,male,P13,,,,James Fletcher
+cv_010,male,P15,,,,Omar Reddy
+cv_011,male,P14,T5,,,Rohan Shah
+cv_012,female,P07,,,,Riya Iyer
+cv_013,male,P12,,,yes,Karan Sharma
+cv_014,male,P02,T1,,,Aditya Nair
+cv_015,male,P06,,,,Thomas Sharma
+cv_016,male,P11,T4,,,Imran Clarke
+cv_017,male,P01,,,,Nikhil Mehta
+cv_018,female,P11,T4,,,Ananya Verma
+cv_019,male,P07,,full-time study,,Samuel Rao
+cv_020,male,P10,,,,Rahul Khan
+cv_021,female,P02,T1,,,Divya Fletcher
+cv_022,male,P05,T2,,,Vikram Sharma
+cv_023,female,P05,T2,,,Kavya Gupta
+cv_024,female,P06,,maternity leave,yes,Meera Reddy
+cv_025,female,P12,,,,Zara Sharma
+cv_026,female,P13,,,,Priya Reddy
+cv_027,female,P01,,maternity leave,,Neha Verma
+cv_028,female,P10,,,yes,Emily Ahmed
+cv_029,female,P15,,,,Aisha Reddy
+cv_030,female,P09,,maternity leave,yes,Sarah Hughes

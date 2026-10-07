@@ -1,0 +1,6 @@
+# The skill scripts in .claude/skills/gender-fair-screening/scripts use only
+# the Python standard library. These packages are for the integration API,
+# the "Vendor B" demo screening service and the standalone app.
+fastapi>=0.110
+uvicorn>=0.29
+streamlit>=1.35

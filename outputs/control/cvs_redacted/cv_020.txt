@@ -1,0 +1,25 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900677
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 2 years of experience in media audience analysis. They have built a claims trend model. Their strengths include clear written communication. They enjoy learning new analysis methods.
+
+EXPERIENCE
+Data Analyst, Northwind Retail | Mar 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+Graduate Analyst, Meridale Health | Dec 2023 to Feb 2025
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BSc Mathematics | [INSTITUTION] | 2023 | Upper Second (2:1)
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics
+
+ACTIVITIES
+- Member, Football Team

@@ -1,0 +1,2511 @@
+{
+  "summary": {
+    "files_redacted": 30,
+    "changes": 355,
+    "changes_by_rule": {
+      "pronoun": 72,
+      "pronoun_verb_agreement": 54,
+      "institution": 41,
+      "candidate_name": 30,
+      "email": 30,
+      "profile_link": 30,
+      "photo": 17,
+      "date_of_birth": 17,
+      "gendered_qualifier": 15,
+      "marital_status": 14,
+      "gender_field": 11,
+      "gendered_job_word": 10,
+      "family_name": 7,
+      "career_break_reason": 6,
+      "gendered_organisation": 1
+    },
+    "output": "outputs\\screener_a\\cvs_redacted"
+  },
+  "changes": [
+    {
+      "cv_id": "cv_001",
+      "line": 1,
+      "original": "Mr Arjun Verma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 2,
+      "original": "arjun.verma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 3,
+      "original": "linkedin.com/in/arjun-verma-78",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 24,
+      "original": "Ravensworth College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 25,
+      "original": "Riverside Public School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 34,
+      "original": "Gender: Male",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_001",
+      "line": 35,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 1,
+      "original": "Mr. Varun Fletcher",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 2,
+      "original": "varun.fletcher@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 3,
+      "original": "linkedin.com/in/varun-fletcher-10",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 20,
+      "original": "University of Larkspur",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 21,
+      "original": "St. Agnes Public School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 28,
+      "original": "Salesman",
+      "replacement": "Salesperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_002",
+      "line": 31,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 1,
+      "original": "Smt. Hannah Rao",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 2,
+      "original": "hannah.rao@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 3,
+      "original": "linkedin.com/in/hannah-rao-69",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 13,
+      "original": "Career break (maternity leave and childcare) | Aug 2023 to Sep 2024",
+      "replacement": "Career break | Aug 2023 to Sep 2024",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 24,
+      "original": "Westmere College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 25,
+      "original": "St. Agnes Girls' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 34,
+      "original": "Date of birth: 25/08/1999",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 35,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 36,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_003",
+      "line": 37,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 1,
+      "original": "Sneha Clarke",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 2,
+      "original": "sneha.clarke@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 3,
+      "original": "linkedin.com/in/sneha-clarke-31",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 14,
+      "original": "Career break (maternity leave) | Nov 2023 to Jul 2024",
+      "replacement": "Career break | Nov 2023 to Jul 2024",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 25,
+      "original": "Ravensworth Women's College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 26,
+      "original": "Riverside Girls' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 35,
+      "original": "Date of birth: 21/05/1998",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 36,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 37,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 38,
+      "original": "Father's name: Edward Clarke",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_004",
+      "line": 39,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 1,
+      "original": "Laura Khan",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 2,
+      "original": "laura.khan@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 3,
+      "original": "linkedin.com/in/laura-khan-74",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 20,
+      "original": "Highcliffe College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 29,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_005",
+      "line": 30,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 1,
+      "original": "Ethan Hughes",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 2,
+      "original": "ethan.hughes@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 3,
+      "original": "linkedin.com/in/ethan-hughes-55",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 20,
+      "original": "Highcliffe College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 29,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_006",
+      "line": 30,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 1,
+      "original": "Fatima Desai",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 2,
+      "original": "fatima.desai@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 3,
+      "original": "linkedin.com/in/fatima-desai-71",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 16,
+      "original": "Westmere College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 22,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 26,
+      "original": "Date of birth: 04/02/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_007",
+      "line": 27,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 1,
+      "original": "Daniel Sharma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 2,
+      "original": "daniel.sharma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 3,
+      "original": "linkedin.com/in/daniel-sharma-44",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 23,
+      "original": "University of Westmere",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 29,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_008",
+      "line": 31,
+      "original": "Salesman",
+      "replacement": "Salesperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 1,
+      "original": "Mr. James Fletcher",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 2,
+      "original": "james.fletcher@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 3,
+      "original": "linkedin.com/in/james-fletcher-76",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 17,
+      "original": "University of Ashford",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 24,
+      "original": "Salesman",
+      "replacement": "Salesperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_009",
+      "line": 28,
+      "original": "Date of birth: 25/10/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 1,
+      "original": "Omar Reddy",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 2,
+      "original": "omar.reddy@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 3,
+      "original": "linkedin.com/in/omar-reddy-48",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 15,
+      "original": "Elmhurst College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 16,
+      "original": "St. Columba Boys' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 22,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 25,
+      "original": "Date of birth: 22/02/2004",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_010",
+      "line": 26,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 1,
+      "original": "Rohan Shah",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 2,
+      "original": "rohan.shah@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 3,
+      "original": "linkedin.com/in/rohan-shah-28",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 16,
+      "original": "Westmere College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 22,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 26,
+      "original": "Date of birth: 04/02/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_011",
+      "line": 27,
+      "original": "Gender: Male",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 1,
+      "original": "Kumari Riya Iyer",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 2,
+      "original": "riya.iyer@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 3,
+      "original": "linkedin.com/in/riya-iyer-91",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 21,
+      "original": "University of Larkspur",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 22,
+      "original": "Hillview Public School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 28,
+      "original": "Women in",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 32,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_012",
+      "line": 33,
+      "original": "Father's name: Edward Iyer",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 1,
+      "original": "Shri Karan Sharma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 2,
+      "original": "karan.sharma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 3,
+      "original": "linkedin.com/in/karan-sharma-48",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 17,
+      "original": "Kingsbridge College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 23,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 24,
+      "original": "Chairman",
+      "replacement": "Chairperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 27,
+      "original": "Date of birth: 17/08/2003",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 28,
+      "original": "Father's name: Suresh Sharma",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_013",
+      "line": 29,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 1,
+      "original": "Shri Aditya Nair",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 2,
+      "original": "aditya.nair@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 3,
+      "original": "linkedin.com/in/aditya-nair-74",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 24,
+      "original": "Kingsbridge College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 25,
+      "original": "St. Columba Boys' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 31,
+      "original": "Chairman",
+      "replacement": "Chairperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_014",
+      "line": 35,
+      "original": "Father's name: Rajesh Nair",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 1,
+      "original": "Thomas Sharma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 2,
+      "original": "thomas.sharma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 3,
+      "original": "linkedin.com/in/thomas-sharma-26",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 21,
+      "original": "Elmhurst College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 30,
+      "original": "Date of birth: 09/09/2000",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_015",
+      "line": 31,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 1,
+      "original": "Imran Clarke",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 2,
+      "original": "imran.clarke@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 3,
+      "original": "linkedin.com/in/imran-clarke-00",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 19,
+      "original": "Westmere College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 28,
+      "original": "Date of birth: 23/11/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 29,
+      "original": "Gender: Male",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 30,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_016",
+      "line": 31,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 1,
+      "original": "Nikhil Mehta",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 2,
+      "original": "nikhil.mehta@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 3,
+      "original": "linkedin.com/in/nikhil-mehta-46",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 25,
+      "original": "Ashford College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 26,
+      "original": "St. Agnes Boys' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 35,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_017",
+      "line": 36,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 1,
+      "original": "Ananya Verma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 2,
+      "original": "ananya.verma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 3,
+      "original": "linkedin.com/in/ananya-verma-80",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 19,
+      "original": "Westmere Women's College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 28,
+      "original": "Date of birth: 23/11/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 29,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 30,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_018",
+      "line": 31,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 1,
+      "original": "Samuel Rao",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 2,
+      "original": "samuel.rao@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 3,
+      "original": "linkedin.com/in/samuel-rao-33",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 14,
+      "original": "Career break (full-time study) | Jan 2024 to Aug 2024",
+      "replacement": "Career break | Jan 2024 to Aug 2024",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 22,
+      "original": "University of Larkspur",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 29,
+      "original": "Chairman",
+      "replacement": "Chairperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 32,
+      "original": "Date of birth: 07/04/1999",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_019",
+      "line": 33,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 1,
+      "original": "Mr. Rahul Khan",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 2,
+      "original": "rahul.khan@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 3,
+      "original": "linkedin.com/in/rahul-khan-95",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "His",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 6,
+      "original": "He",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 19,
+      "original": "University of Northgate",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 25,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 28,
+      "original": "Date of birth: 05/03/2001",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_020",
+      "line": 29,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 1,
+      "original": "Miss Divya Fletcher",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 2,
+      "original": "divya.fletcher@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 3,
+      "original": "linkedin.com/in/divya-fletcher-85",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 24,
+      "original": "Kingsbridge College for Women",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 25,
+      "original": "St. Columba Girls' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 31,
+      "original": "Chairwoman",
+      "replacement": "Chairperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_021",
+      "line": 35,
+      "original": "Father's name: Gopal Fletcher",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 1,
+      "original": "Shri Vikram Sharma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 2,
+      "original": "vikram.sharma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 3,
+      "original": "linkedin.com/in/vikram-sharma-66",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 22,
+      "original": "Larkspur College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 28,
+      "original": "Men's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 29,
+      "original": "Salesman",
+      "replacement": "Salesperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 33,
+      "original": "Gender: Male",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 34,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_022",
+      "line": 35,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 1,
+      "original": "Miss Kavya Gupta",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 2,
+      "original": "kavya.gupta@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 3,
+      "original": "linkedin.com/in/kavya-gupta-29",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 22,
+      "original": "Larkspur College for Women",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 28,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 29,
+      "original": "Waitress",
+      "replacement": "Server",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 33,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 34,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_023",
+      "line": 35,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 1,
+      "original": "Meera Reddy",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 2,
+      "original": "meera.reddy@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 3,
+      "original": "linkedin.com/in/meera-reddy-66",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 14,
+      "original": "Career break (maternity leave) | Aug 2023 to May 2024",
+      "replacement": "Career break | Aug 2023 to May 2024",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 22,
+      "original": "Elmhurst College for Women",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 23,
+      "original": "Riverside Girls' School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 29,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 32,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_024",
+      "line": 33,
+      "original": "Father's name: Harish Reddy",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 1,
+      "original": "Mrs. Zara Sharma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 2,
+      "original": "zara.sharma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 3,
+      "original": "linkedin.com/in/zara-sharma-16",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 17,
+      "original": "Kingsbridge Women's College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 18,
+      "original": "St. Columba Public School",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 24,
+      "original": "Women in",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_025",
+      "line": 27,
+      "original": "Date of birth: 17/08/2003",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 1,
+      "original": "Mrs. Priya Reddy",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 2,
+      "original": "priya.reddy@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 3,
+      "original": "linkedin.com/in/priya-reddy-00",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 17,
+      "original": "Ashford Women's College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 23,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 24,
+      "original": "Women in",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 27,
+      "original": "Date of birth: 25/10/2002",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 28,
+      "original": "Marital status: Married",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_026",
+      "line": 29,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 1,
+      "original": "Mrs. Neha Verma",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 2,
+      "original": "neha.verma@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 3,
+      "original": "linkedin.com/in/neha-verma-90",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 14,
+      "original": "Career break (maternity leave) | Dec 2022 to Nov 2023",
+      "replacement": "Career break | Dec 2022 to Nov 2023",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 26,
+      "original": "University of Ashford",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 32,
+      "original": "Girls Who Code",
+      "replacement": "a coding community",
+      "rule": "gendered_organisation"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 35,
+      "original": "Date of birth: 03/06/1996",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_027",
+      "line": 36,
+      "original": "Husband's name: Suresh Verma",
+      "replacement": "",
+      "rule": "family_name"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 1,
+      "original": "Emily Ahmed",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 2,
+      "original": "emily.ahmed@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 3,
+      "original": "linkedin.com/in/emily-ahmed-54",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 19,
+      "original": "Northgate College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 25,
+      "original": "Chairwoman",
+      "replacement": "Chairperson",
+      "rule": "gendered_job_word"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 28,
+      "original": "Date of birth: 05/03/2001",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_028",
+      "line": 29,
+      "original": "Gender: Female",
+      "replacement": "",
+      "rule": "gender_field"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 1,
+      "original": "Aisha Reddy",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 2,
+      "original": "aisha.reddy@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 3,
+      "original": "linkedin.com/in/aisha-reddy-39",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 15,
+      "original": "Elmhurst College for Women",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 21,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 24,
+      "original": "Date of birth: 22/02/2004",
+      "replacement": "",
+      "rule": "date_of_birth"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 25,
+      "original": "Marital status: Single",
+      "replacement": "",
+      "rule": "marital_status"
+    },
+    {
+      "cv_id": "cv_029",
+      "line": 26,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 1,
+      "original": "Sarah Hughes",
+      "replacement": "[CANDIDATE]",
+      "rule": "candidate_name"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 2,
+      "original": "sarah.hughes@example.com",
+      "replacement": "[EMAIL]",
+      "rule": "email"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 3,
+      "original": "linkedin.com/in/sarah-hughes-84",
+      "replacement": "[PROFILE]",
+      "rule": "profile_link"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "is",
+      "replacement": "are",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "has",
+      "replacement": "have",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "Her",
+      "replacement": "Their",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "enjoys",
+      "replacement": "enjoy",
+      "rule": "pronoun_verb_agreement"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 6,
+      "original": "She",
+      "replacement": "They",
+      "rule": "pronoun"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 14,
+      "original": "Career break (maternity leave) | May 2024 to Dec 2024",
+      "replacement": "Career break | May 2024 to Dec 2024",
+      "rule": "career_break_reason"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 21,
+      "original": "Larkspur College",
+      "replacement": "[INSTITUTION]",
+      "rule": "institution"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 27,
+      "original": "Women's",
+      "replacement": "",
+      "rule": "gendered_qualifier"
+    },
+    {
+      "cv_id": "cv_030",
+      "line": 31,
+      "original": "Photo: attached",
+      "replacement": "",
+      "rule": "photo"
+    }
+  ]
+}

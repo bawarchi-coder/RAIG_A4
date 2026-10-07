@@ -1,0 +1,31 @@
+Sarah Hughes
+Email: sarah.hughes@example.com | Phone: +44 7700 900472
+LinkedIn: linkedin.com/in/sarah-hughes-84
+
+SUMMARY
+She is a data analyst with 3 years of experience in travel booking analytics. She has built a store performance scorecard. Her strengths include clear written communication. She enjoys improving how teams use data.
+
+EXPERIENCE
+Data Analyst (part-time), Northwind Retail | Jan 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Career break (maternity leave) | May 2024 to Dec 2024
+Junior Data Analyst, Peregrina Consulting | Dec 2022 to Apr 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BA Psychology | Larkspur College | 2022 | First Class
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau
+
+ACTIVITIES
+- Captain, Women's Cricket Team
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Photo: attached

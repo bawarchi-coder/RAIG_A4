@@ -1,0 +1,35 @@
+Miss Divya Fletcher
+Email: divya.fletcher@example.com | Phone: +44 7700 900667
+LinkedIn: linkedin.com/in/divya-fletcher-85
+
+SUMMARY
+Data analyst with 6 years of experience in insurance pricing. Has built a sales forecasting model. Strengths include clear written communication. Enjoys explaining numbers to non-technical colleagues.
+
+EXPERIENCE
+Senior Data Analyst, Kestrova Telecom | Apr 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+- Presented findings to stakeholder groups and agreed next steps
+MIS Executive, Meridale Health | Feb 2022 to Mar 2024
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+Reporting Analyst, Orbitalis Travel | Aug 2020 to Jan 2022
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+BSc Mathematics | Kingsbridge College for Women | 2020 | First Class
+Higher secondary | St. Columba Girls' School | 2017
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI, Stakeholder communication
+
+ACTIVITIES
+- Chairwoman, Analytics Club
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Father's name: Gopal Fletcher

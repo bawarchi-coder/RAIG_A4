@@ -1,0 +1,28 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900786
+LinkedIn: [PROFILE]
+
+SUMMARY
+Data analyst with 3 years of experience in travel booking analytics. Has built a store performance scorecard. Strengths include clear written communication. Enjoys improving how teams use data.
+
+EXPERIENCE
+Data Analyst, Peregrina Consulting | Jan 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Cobaltix Fintech | Aug 2023 to Dec 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BA Psychology | [INSTITUTION] | 2023 | First Class
+Higher secondary | [INSTITUTION] | 2020
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau
+
+ACTIVITIES
+- Member, Data Science Society
+- Salesperson, Corner Street Market (summer job)

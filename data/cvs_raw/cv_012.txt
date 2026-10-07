@@ -1,0 +1,33 @@
+Kumari Riya Iyer
+Email: riya.iyer@example.com | Phone: +44 7700 900770
+LinkedIn: linkedin.com/in/riya-iyer-91
+
+SUMMARY
+She is a data analyst with 3 years of experience in energy usage analysis. She has built a demand planning model. Her strengths include clear written communication. She enjoys explaining numbers to non-technical colleagues.
+
+EXPERIENCE
+Data Analyst, Cobaltix Fintech | Sep 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Reporting Analyst, Peregrina Consulting | Dec 2022 to Aug 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+- Led data cleaning for a customer database migration
+
+EDUCATION
+BSc Computer Science | University of Larkspur | 2022 | Upper Second (2:1)
+Higher secondary | Hillview Public School | 2019
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning
+
+ACTIVITIES
+- Mentor, Women in Data Network
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Marital status: Single
+Father's name: Edward Iyer

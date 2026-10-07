@@ -1,0 +1,28 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900472
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 3 years of experience in travel booking analytics. They have built a store performance scorecard. Their strengths include clear written communication. They enjoy improving how teams use data.
+
+EXPERIENCE
+Data Analyst (part-time), Northwind Retail | Jan 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Career break | May 2024 to Dec 2024
+Junior Data Analyst, Peregrina Consulting | Dec 2022 to Apr 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BA Psychology | [INSTITUTION] | 2022 | First Class
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau
+
+ACTIVITIES
+- Captain, Cricket Team
+- Volunteer data tutor, Community Learning Centre

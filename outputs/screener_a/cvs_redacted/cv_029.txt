@@ -1,0 +1,21 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900912
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 1 year of experience in consulting analytics. They have built a client benchmarking tool. Their strengths include clear written communication. They enjoy learning new analysis methods.
+
+EXPERIENCE
+Data Analyst, Peregrina Consulting | Aug 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+
+EDUCATION
+BSc Biology | [INSTITUTION] | 2025 | Upper Second (2:1)
+
+SKILLS
+SQL, Excel, Python
+
+ACTIVITIES
+- Captain, Cricket Team

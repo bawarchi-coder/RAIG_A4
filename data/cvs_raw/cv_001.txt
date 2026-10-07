@@ -1,0 +1,35 @@
+Mr Arjun Verma
+Email: arjun.verma@example.com | Phone: +44 7700 900369
+LinkedIn: linkedin.com/in/arjun-verma-78
+
+SUMMARY
+He is a data analyst with 5 years of experience in supply chain analytics. He has built automated data quality checks. His strengths include clear written communication. He enjoys finding patterns in customer behaviour.
+
+EXPERIENCE
+Senior Data Analyst, Bluefin Insurance | Aug 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+- Presented findings to stakeholder groups and agreed next steps
+Graduate Analyst, Silverkey Insurance | Sep 2022 to Jul 2024
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+MIS Executive, Harbourline Bank | Apr 2021 to Aug 2022
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+BSc Economics | Ravensworth College | 2020 | First Class
+Higher secondary | Riverside Public School | 2017
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI, Stakeholder communication
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Gender: Male
+Photo: attached

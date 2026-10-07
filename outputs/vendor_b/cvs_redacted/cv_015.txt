@@ -1,0 +1,27 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900220
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 4 years of experience in telecom churn analysis. They have built a stock-level tracker. Their strengths include clear written communication. They enjoy turning messy data into clear decisions.
+
+EXPERIENCE
+Data Analyst, Vantora Energy | Jun 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Tesserine Analytics | Aug 2022 to May 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+- Led data cleaning for a customer database migration
+
+EDUCATION
+BCom Accounting and Finance | [INSTITUTION] | 2022 | First Class
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre

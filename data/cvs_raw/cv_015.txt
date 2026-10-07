@@ -1,0 +1,31 @@
+Thomas Sharma
+Email: thomas.sharma@example.com | Phone: +44 7700 900220
+LinkedIn: linkedin.com/in/thomas-sharma-26
+
+SUMMARY
+He is a data analyst with 4 years of experience in telecom churn analysis. He has built a stock-level tracker. His strengths include clear written communication. He enjoys turning messy data into clear decisions.
+
+EXPERIENCE
+Data Analyst, Vantora Energy | Jun 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Tesserine Analytics | Aug 2022 to May 2024
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+- Led data cleaning for a customer database migration
+
+EDUCATION
+BCom Accounting and Finance | Elmhurst College | 2022 | First Class
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 09/09/2000
+Photo: attached

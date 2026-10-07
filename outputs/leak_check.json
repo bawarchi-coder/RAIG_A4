@@ -1,0 +1,14 @@
+{
+  "files_checked": 30,
+  "names_checked": 45,
+  "leak_count": 0,
+  "leaks": [],
+  "one_sided_terms": [
+    {
+      "term": "salesperson",
+      "only_in": "male",
+      "cvs": 4
+    }
+  ],
+  "one_sided_note": "Terms used only for one gender (3+ CVs). Review by hand: a placeholder or phrase here can reveal gender. Some may be chance."
+}

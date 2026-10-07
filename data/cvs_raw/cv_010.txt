@@ -1,0 +1,26 @@
+Omar Reddy
+Email: omar.reddy@example.com | Phone: +44 7700 900242
+LinkedIn: linkedin.com/in/omar-reddy-48
+
+SUMMARY
+Data analyst with 1 year of experience in consulting analytics. Has built a client benchmarking tool. Strengths include clear written communication. Enjoys learning new analysis methods.
+
+EXPERIENCE
+Data Analyst, Vantora Energy | Aug 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+
+EDUCATION
+BSc Biology | Elmhurst College | 2025 | Upper Second (2:1)
+Higher secondary | St. Columba Boys' School | 2022
+
+SKILLS
+SQL, Excel, Python
+
+ACTIVITIES
+- Captain, Men's Cricket Team
+
+PERSONAL DETAILS
+Date of birth: 22/02/2004
+Marital status: Married

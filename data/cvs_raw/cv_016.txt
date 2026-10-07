@@ -1,0 +1,31 @@
+Imran Clarke
+Email: imran.clarke@example.com | Phone: +44 7700 900873
+LinkedIn: linkedin.com/in/imran-clarke-00
+
+SUMMARY
+He is a data analyst with 2 years of experience in marketing analytics. He has built a campaign response model. His strengths include clear written communication. He enjoys turning messy data into clear decisions.
+
+EXPERIENCE
+Business Analyst, Northwind Retail | Jun 2025 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+MIS Executive, Peregrina Consulting | Apr 2024 to May 2025
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+
+EDUCATION
+BBA | Westmere College | 2023 | CGPA 7.9/10
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 23/11/2002
+Gender: Male
+Marital status: Married
+Photo: attached

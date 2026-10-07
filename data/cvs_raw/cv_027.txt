@@ -1,0 +1,36 @@
+Mrs. Neha Verma
+Email: neha.verma@example.com | Phone: +44 7700 900866
+LinkedIn: linkedin.com/in/neha-verma-90
+
+SUMMARY
+She is a data analyst with 7 years of experience in retail and e-commerce analytics. She has built a customer segmentation model. Her strengths include clear written communication. She enjoys turning messy data into clear decisions.
+
+EXPERIENCE
+Senior Data Analyst, Saffronleaf Foods | Dec 2023 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+- Presented findings to stakeholder groups and agreed next steps
+Career break (maternity leave) | Dec 2022 to Nov 2023
+Junior Data Analyst, Cobaltix Fintech | Jul 2020 to Nov 2022
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+- Maintained ETL jobs that load the data warehouse each night
+Operations Analyst, Vantora Energy | Oct 2018 to Jun 2020
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+MSc Data Science | University of Ashford | 2018 | Distinction
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI, Stakeholder communication, ETL
+
+ACTIVITIES
+- Volunteer, Girls Who Code
+
+PERSONAL DETAILS
+Date of birth: 03/06/1996
+Husband's name: Suresh Verma

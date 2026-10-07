@@ -1,0 +1,36 @@
+Nikhil Mehta
+Email: nikhil.mehta@example.com | Phone: +44 7700 900725
+LinkedIn: linkedin.com/in/nikhil-mehta-46
+
+SUMMARY
+Data analyst with 7 years of experience in retail and e-commerce analytics. Has built a customer segmentation model. Strengths include clear written communication. Enjoys turning messy data into clear decisions.
+
+EXPERIENCE
+Senior Data Analyst, Marigold Retail Group | Dec 2023 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+- Presented findings to stakeholder groups and agreed next steps
+Junior Data Analyst, Northwind Retail | Jul 2021 to Nov 2023
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+- Maintained ETL jobs that load the data warehouse each night
+Operations Analyst, Meridale Health | Oct 2019 to Jun 2021
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+MSc Data Science | Ashford College | 2019 | Distinction
+Higher secondary | St. Agnes Boys' School | 2016
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI, Stakeholder communication, ETL
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Marital status: Married
+Photo: attached

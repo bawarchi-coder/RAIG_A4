@@ -1,0 +1,33 @@
+Samuel Rao
+Email: samuel.rao@example.com | Phone: +44 7700 900421
+LinkedIn: linkedin.com/in/samuel-rao-33
+
+SUMMARY
+He is a data analyst with 3 years of experience in energy usage analysis. He has built a demand planning model. His strengths include clear written communication. He enjoys explaining numbers to non-technical colleagues.
+
+EXPERIENCE
+Data Analyst, Meridale Health | Sep 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Career break (full-time study) | Jan 2024 to Aug 2024
+Reporting Analyst, Saffronleaf Foods | Apr 2022 to Dec 2023
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+- Led data cleaning for a customer database migration
+
+EDUCATION
+BSc Computer Science | University of Larkspur | 2021 | Upper Second (2:1)
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning
+
+ACTIVITIES
+- Member, Data Science Society
+- Chairman, Analytics Club
+
+PERSONAL DETAILS
+Date of birth: 07/04/1999
+Photo: attached

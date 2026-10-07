@@ -1,0 +1,12 @@
+{
+  "files_checked": 30,
+  "leak_count": 0,
+  "leaks": [],
+  "one_sided_terms": [
+    {
+      "term": "salesperson",
+      "only_in": "male",
+      "cvs": 4
+    }
+  ]
+}

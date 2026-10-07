@@ -1,0 +1,39 @@
+Sneha Clarke
+Email: sneha.clarke@example.com | Phone: +44 7700 900807
+LinkedIn: linkedin.com/in/sneha-clarke-31
+
+SUMMARY
+She is a data analyst with 5 years of experience in supply chain analytics. She has built automated data quality checks. Her strengths include clear written communication. She enjoys finding patterns in customer behaviour.
+
+EXPERIENCE
+Senior Data Analyst (part-time), Bluefin Insurance | Aug 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+- Presented findings to stakeholder groups and agreed next steps
+Career break (maternity leave) | Nov 2023 to Jul 2024
+Graduate Analyst, Tesserine Analytics | Dec 2021 to Oct 2023
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+MIS Executive, Kestrova Telecom | Jul 2020 to Nov 2021
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+BSc Economics | Ravensworth Women's College | 2020 | First Class
+Higher secondary | Riverside Girls' School | 2017
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI, Stakeholder communication
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 21/05/1998
+Gender: Female
+Marital status: Single
+Father's name: Edward Clarke
+Photo: attached

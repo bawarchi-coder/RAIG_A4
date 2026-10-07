@@ -1,0 +1,37 @@
+Smt. Hannah Rao
+Email: hannah.rao@example.com | Phone: +44 7700 900748
+LinkedIn: linkedin.com/in/hannah-rao-69
+
+SUMMARY
+She is a data analyst with 5 years of experience in banking customer analytics. She has built a pricing analysis toolkit. Her strengths include clear written communication. She enjoys improving how teams use data.
+
+EXPERIENCE
+Data Analyst, Cobaltix Fintech | Oct 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+Career break (maternity leave and childcare) | Aug 2023 to Sep 2024
+Junior Data Analyst, Halcyra Pharma | Nov 2021 to Jul 2023
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+Operations Analyst, Orbitalis Travel | Aug 2020 to Oct 2021
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+BTech Computer Science | Westmere College | 2020 | CGPA 8.6/10
+Higher secondary | St. Agnes Girls' School | 2017
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI
+
+ACTIVITIES
+- Volunteer data tutor, Community Learning Centre
+
+PERSONAL DETAILS
+Date of birth: 25/08/1999
+Gender: Female
+Marital status: Married
+Photo: attached

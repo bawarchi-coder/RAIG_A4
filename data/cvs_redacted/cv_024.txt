@@ -1,0 +1,29 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900454
+LinkedIn: [PROFILE]
+
+SUMMARY
+Data analyst with 4 years of experience in telecom churn analysis. Has built a stock-level tracker. Strengths include clear written communication. Enjoys turning messy data into clear decisions.
+
+EXPERIENCE
+Data Analyst (part-time), Peregrina Consulting | Jun 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Automated recurring analysis in Python
+- Owned weekly KPI reporting for the leadership team
+- Published Tableau workbooks used across three departments
+Career break | Aug 2023 to May 2024
+Junior Data Analyst, Ironmere Manufacturing | Oct 2021 to Jul 2023
+- Built Excel models to track budgets and forecasts
+- Designed dashboards for regional managers
+- Used statistics to explain changes in customer churn
+- Led data cleaning for a customer database migration
+
+EDUCATION
+BCom Accounting and Finance | [INSTITUTION] | 2021 | First Class
+Higher secondary | [INSTITUTION] | 2018
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning
+
+ACTIVITIES
+- Vice-captain, Hockey Team

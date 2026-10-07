@@ -1,0 +1,57 @@
+# Gender Fairness Audit: Data Analyst
+
+**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** Screener A &nbsp; **CVs screened:** raw (gender markers visible)
+
+## Recommendation
+**Do not use this shortlist**
+
+This shortlist shows evidence of adverse impact: the selection rate for female candidates is 0.25 of the rate for male candidates, below the four-fifths (0.80) threshold; and 5 of 5 twin pairs, whose CVs differ only in gender markers, received different scores. The cause must be found and fixed before the shortlist is used.
+
+## Results
+| Measure | Men | Women | Result |
+|---|---|---|---|
+| Candidates | 15 | 15 | |
+| Shortlisted | 8 | 2 | |
+| Selection rate | 53% | 13% | |
+| Impact ratio | | | 0.25: **FAIL** at 0.80 |
+| Mean score | 61.2 | 35.5 | gap +25.7 points (men minus women) |
+
+**Twin test:** 5 pairs, 0 scored identically.
+
+| Pair | Man | Woman | Score (man) | Score (woman) | Difference |
+|---|---|---|---|---|---|
+| T1 | cv_014 | cv_021 | 89.8 | 64.8 | +25.0 |
+| T2 | cv_022 | cv_023 | 76.5 | 51.5 | +25.0 |
+| T3 | cv_006 | cv_005 | 61.5 | 36.5 | +25.0 |
+| T4 | cv_016 | cv_018 | 51.5 | 26.5 | +25.0 |
+| T5 | cv_011 | cv_007 | 30.5 | 19.5 | +11.0 |
+
+**Statistical note:** Fisher's exact test p = 0.050. With this few candidates the difference could be chance (p ≥ 0.05), so the four-fifths result is a warning sign, not proof. The four-fifths rule is a rule of thumb and is unreliable on small samples.
+
+## Redaction summary
+Not applied. The CVs were screened with names, pronouns and other gender markers visible. This is the baseline the fairness layer is compared with.
+
+## Proxy signals found
+| Signal | Who it affects | Penalty measured by probe | Job-related reason? | Action |
+|---|---|---|---|---|
+| Career break or gap | 5 female, 1 male | not probed | n/a | Keep monitoring |
+| Part-time work | 4 female, 1 male | not probed | n/a | Keep monitoring |
+
+Selection rates for candidates with and without each signal: career break or gap 33% with, 33% without; part-time work 0% with, 40% without. Rates alone can hide a penalty in small pools; the probe tests it directly.
+
+## Conditions and next steps
+1. Do not shortlist from this ranking. Find the cause of the gap and re-run the audit.
+2. The tool reacts to gender markers. Screen only redacted CVs, or replace the tool.
+3. Repeat the audit on a larger pool, or across several hiring rounds, before drawing firm conclusions.
+4. A named person reviews this report and makes the final shortlist decision.
+
+## Limits of this audit
+- Redaction reduces gender signals; it does not guarantee fairness.
+- Results on small candidate pools are indicative, not conclusive. Here at least one group has fewer than 30 candidates.
+- Only gender is assessed, as a binary label, not other protected characteristics or their intersections.
+- The screener was tested as a black box. The probe shows *that* a signal is penalised, not why.
+
+## Reviewer notes
+_None yet. The reviewer adds notes here; the numbers above are not edited._
+
+*This audit supports a human decision. It does not make the hiring decision. A named person must review it and is accountable for the outcome.*
