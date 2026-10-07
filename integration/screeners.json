@@ -1,0 +1,17 @@
+{
+  "screener_a": {
+    "label": "Screener A: legacy command-line tool",
+    "type": "command",
+    "cmd": "python demo/biased_screener.py --cvs {cvs} --jd {jd} --out {out} --top-k {top_k}"
+  },
+  "screener_a_control": {
+    "label": "Screener A with hidden rules switched off (control)",
+    "type": "command",
+    "cmd": "python demo/biased_screener.py --cvs {cvs} --jd {jd} --out {out} --top-k {top_k} --no-bias"
+  },
+  "vendor_b": {
+    "label": "Vendor B TalentRank: cloud service over HTTP",
+    "type": "http",
+    "url": "http://127.0.0.1:8001/score"
+  }
+}

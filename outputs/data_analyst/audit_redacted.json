@@ -1,5 +1,5 @@
 {
-  "ranking_file": "outputs/ranking_redacted.csv",
+  "ranking_file": "outputs/data_analyst/ranking_redacted.csv",
   "candidates": 30,
   "shortlist_size": 10,
   "groups": {

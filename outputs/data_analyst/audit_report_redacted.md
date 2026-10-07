@@ -1,6 +1,6 @@
 # Gender Fairness Audit: Data Analyst
 
-**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** Screener A &nbsp; **CVs screened:** redacted
+**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** demo/biased_screener.py &nbsp; **CVs screened:** redacted
 
 ## Recommendation
 **Do not use this shortlist**
@@ -52,6 +52,12 @@ Selection rates for candidates with and without each signal: career break or gap
 - The screener was tested as a black box. The probe shows *that* a signal is penalised, not why.
 
 ## Reviewer notes
-_None yet. The reviewer adds notes here; the numbers above are not edited._
+*Reviewer: Claude (AI assistant), 2026-10-07. To be confirmed by the named decision-maker.*
+
+- **One-sided term "salesperson".** Comes from "Salesman" in 4 men's CVs (cv_002, cv_008, cv_009, cv_022), the correct neutral replacement for a real job title. Kept, since job titles are not altered. Twin pair T2 differs only in "Salesperson" (man) vs "Server" (woman) and scored identically, so the tool does not appear to react to it here. Residual risk, not changed.
+- **Manual read** of cv_022, cv_023 and cv_027: no remaining gender markers; break reason and "Girls Who Code" neutralised; text reads naturally.
+- **Career-break penalty changes this shortlist.** cv_003 (woman, maternity and childcare break) ranks 11th at 60.0; the probe scores the same CV 70.0 without the break, above the 10th-place score of 60.8 (cv_015). cv_024 (woman, maternity break) scores 60.8 without the break, equal to the cutoff. This compares probe and ranking outputs; it is not a re-ranking. The real effect needs a re-run once the penalty is removed.
+- **Four-fifths fail is one candidate wide** (4 vs 6, p = 0.700) and the twin test is clean, so redaction removed the direct gender effect. The remaining gap is consistent with the career-break penalty, but this audit cannot prove that is the cause.
+- **Part-time work:** lower shortlist rate (1 of 5) but the probe shows no penalty, so the tool does not appear to score part-time work itself. Keep monitoring.
 
 *This audit supports a human decision. It does not make the hiring decision. A named person must review it and is accountable for the outcome.*

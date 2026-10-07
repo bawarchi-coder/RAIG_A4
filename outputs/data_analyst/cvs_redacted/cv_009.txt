@@ -1,0 +1,25 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900464
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 1 year of experience in manufacturing quality analysis. They have built a defect trend tracker. Their strengths include clear written communication. They enjoy finding patterns in customer behaviour.
+
+EXPERIENCE
+Data Analyst, Vantora Energy | Dec 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+- Designed dashboards for regional managers
+- Owned weekly KPI reporting for the leadership team
+
+EDUCATION
+BCom | [INSTITUTION] | 2024 | CGPA 7.4/10
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting
+
+ACTIVITIES
+- Member, Data Science Society
+- Salesperson, Corner Street Market (summer job)
+- Volunteer data tutor, Community Learning Centre

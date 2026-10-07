@@ -414,14 +414,14 @@ Before the day: record a backup run, enlarge the terminal font, and keep the thr
 
 ## 13. Progress checklist
 
-- [ ] Step 1: Claude Code running in VS Code
-- [ ] Step 2: Project scaffolded
-- [ ] Step 3: 30 synthetic CVs and labels generated
-- [ ] Step 4: Biased screener produces `ranking_raw.csv`
-- [ ] Step 5: Three scripts working, one result verified by hand
-- [ ] Step 6: Reference files written and sources checked
-- [ ] Step 7: SKILL.md written
-- [ ] Step 8: Report template added
-- [ ] Step 9: All tests pass in a fresh session
-- [ ] Step 10: API wrapper (optional)
-- [ ] Step 11: README, saved reports, demo recording, git commit
+- [x] Step 1: Claude Code running in VS Code
+- [x] Step 2: Project scaffolded
+- [x] Step 3: 30 synthetic CVs and labels generated
+- [x] Step 4: Biased screener produces `ranking_raw.csv`
+- [x] Step 5: Three scripts working, one result verified by hand (2 women in the raw top 10, matches the audit)
+- [ ] Step 6: Reference files written (drafted 2026-10-07) and sources checked (**still to do: tick each `[ ]` citation in references/**)
+- [x] Step 7: SKILL.md written; every path exists and every command runs
+- [x] Step 8: Report template added
+- [x] Step 9: Fresh-session test passed: natural trigger, all stages, black-box rule kept, numbers identical (see `outputs/data_analyst/`). Baseline test skipped: see README
+- [x] Step 10: API wrapper (now required), plus standalone app (`app.py`)
+- [ ] Step 11: README, saved reports and git commit done; **demo recording still to do**

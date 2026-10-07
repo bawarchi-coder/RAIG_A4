@@ -1,11 +1,11 @@
 # Gender Fairness Audit: Data Analyst
 
-**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** Screener A &nbsp; **CVs screened:** raw (gender markers visible)
+**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** demo/biased_screener.py &nbsp; **CVs screened:** raw (gender markers visible)
 
 ## Recommendation
 **Do not use this shortlist**
 
-This shortlist shows evidence of adverse impact: the selection rate for female candidates is 0.25 of the rate for male candidates, below the four-fifths (0.80) threshold; and 5 of 5 twin pairs, whose CVs differ only in gender markers, received different scores. The cause must be found and fixed before the shortlist is used.
+This shortlist shows evidence of adverse impact: the selection rate for female candidates is 0.25 of the rate for male candidates, below the four-fifths (0.80) threshold; and 5 of 5 twin pairs, whose CVs differ only in gender markers, received different scores. The probe also found that the screener penalises career break or gap (candidates affected, career break or gap: 5 female, 1 male).
 
 ## Results
 | Measure | Men | Women | Result |
@@ -34,16 +34,17 @@ Not applied. The CVs were screened with names, pronouns and other gender markers
 ## Proxy signals found
 | Signal | Who it affects | Penalty measured by probe | Job-related reason? | Action |
 |---|---|---|---|---|
-| Career break or gap | 5 female, 1 male | not probed | n/a | Keep monitoring |
-| Part-time work | 4 female, 1 male | not probed | n/a | Keep monitoring |
+| Career break or gap | 5 female, 1 male | 6 of 6 CVs penalised, mean 10.0 points | Not established: a human must answer | Remove the penalty or justify it in writing; review affected CVs by hand |
+| Part-time work | 4 female, 1 male | 0 of 5 CVs penalised, mean 0.0 points | n/a | Keep monitoring |
 
 Selection rates for candidates with and without each signal: career break or gap 33% with, 33% without; part-time work 0% with, 40% without. Rates alone can hide a penalty in small pools; the probe tests it directly.
 
 ## Conditions and next steps
 1. Do not shortlist from this ranking. Find the cause of the gap and re-run the audit.
 2. The tool reacts to gender markers. Screen only redacted CVs, or replace the tool.
-3. Repeat the audit on a larger pool, or across several hiring rounds, before drawing firm conclusions.
-4. A named person reviews this report and makes the final shortlist decision.
+3. Ask the vendor or tool owner to remove the career break or gap penalty, or document a job-related reason for it. Until then, review every affected CV by hand (cv_003, cv_004, cv_019, cv_024, cv_027, cv_030).
+4. Repeat the audit on a larger pool, or across several hiring rounds, before drawing firm conclusions.
+5. A named person reviews this report and makes the final shortlist decision.
 
 ## Limits of this audit
 - Redaction reduces gender signals; it does not guarantee fairness.
@@ -52,6 +53,11 @@ Selection rates for candidates with and without each signal: career break or gap
 - The screener was tested as a black box. The probe shows *that* a signal is penalised, not why.
 
 ## Reviewer notes
-_None yet. The reviewer adds notes here; the numbers above are not edited._
+*Reviewer: Claude (AI assistant), 2026-10-07. To be confirmed by the named decision-maker.*
+
+- **This is the current shortlist.** Fisher's p = 0.050 is borderline, but the twin test settles the question on its own: CVs identical except for gender markers scored 25 points higher for the man in 4 pairs and 11 points higher in the fifth. The tool scores gender markers directly.
+- **Clearest example:** twin pair T2. cv_022 (man) is shortlisted at rank 4; cv_023 (woman), word-for-word the same CV apart from name, pronouns and one summer-job title, ranks 15th and is rejected.
+- **Who changes when gender is hidden:** the blind run shortlists cv_004 and cv_023 (both women) in place of cv_006 and cv_019 (both men). The other 8 names are the same.
+- The proxy rows come from the probe run on redacted CVs with the same tool; the career-break penalty applies to this baseline as well.
 
 *This audit supports a human decision. It does not make the hiring decision. A named person must review it and is accountable for the outcome.*

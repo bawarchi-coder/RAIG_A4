@@ -1,0 +1,24 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900598
+LinkedIn: [PROFILE]
+
+SUMMARY
+They are a data analyst with 2 years of experience in education performance analysis. They have built a delivery time tracker. Their strengths include clear written communication. They enjoy explaining numbers to non-technical colleagues.
+
+EXPERIENCE
+Data Analyst, Bluefin Insurance | Aug 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Built Excel models to track budgets and forecasts
+- Automated recurring analysis in Python
+- Designed dashboards for regional managers
+- Owned weekly KPI reporting for the leadership team
+
+EDUCATION
+BSc Geography | [INSTITUTION] | 2024 | Upper Second (2:1)
+Higher secondary | [INSTITUTION] | 2021
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting
+
+ACTIVITIES
+- Member, Tech Society

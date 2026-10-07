@@ -1,0 +1,31 @@
+[CANDIDATE]
+Email: [EMAIL] | Phone: +44 7700 900917
+LinkedIn: [PROFILE]
+
+SUMMARY
+Data analyst with 5 years of experience in banking customer analytics. Has built a pricing analysis toolkit. Strengths include clear written communication. Enjoys improving how teams use data.
+
+EXPERIENCE
+Data Analyst, Bluefin Insurance | Oct 2024 to Present
+- Wrote SQL queries to join sales, customer and product data
+- Designed dashboards for regional managers
+- Published Tableau workbooks used across three departments
+Junior Data Analyst, Vantora Energy | Jan 2023 to Sep 2024
+- Built Excel models to track budgets and forecasts
+- Owned weekly KPI reporting for the leadership team
+- Led data cleaning for a customer database migration
+Operations Analyst, Halcyra Pharma | Oct 2021 to Dec 2022
+- Automated recurring analysis in Python
+- Used statistics to explain changes in customer churn
+- Maintained Power BI reports for the finance team
+
+EDUCATION
+BTech Computer Science | [INSTITUTION] | 2021 | CGPA 8.6/10
+
+SKILLS
+SQL, Excel, Python, Dashboards, Reporting, Statistics, Tableau, Data cleaning, Power BI
+
+ACTIVITIES
+- Captain, Basketball Team
+- Member, Data Science Society
+- Salesperson, Corner Street Market (summer job)

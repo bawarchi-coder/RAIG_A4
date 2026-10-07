@@ -1,7 +1,7 @@
 ---
 name: gender-fair-screening
 description: Makes CV screening gender-fair. Redacts gender markers from CVs before an existing screening tool scores them, then audits the shortlist for gender gaps and tests the tool for proxy bias such as career-break penalties. Use when asked to screen, rank or shortlist CVs or candidate profiles, to check whether a hiring shortlist or screening tool can be trusted or is biased against women or men, or to anonymise CVs.
-allowed-tools: Bash(python *) Bash(python3 *)
+allowed-tools: Bash(python *) Bash(python3 *) PowerShell(python *)
 ---
 
 # Gender-fair CV screening
@@ -12,6 +12,9 @@ has: hide gender before screening, then check the outcome after.
 Follow every stage in order for the whole task, and tell the user which stage
 you are on. Run commands from the project root. Use `python` (on Windows
 `python3` may not exist). Always keep the script paths in double quotes.
+Run each script as a single command, exactly as written below: do not chain
+it with `mkdir`, `;`, `&&` or `$(...)`. The scripts create their own output
+folders. Write outputs to `outputs/` unless the user names another folder.
 
 ## Ground rules
 - **Separation of duties.** Gender labels are for the audit only. Never pass

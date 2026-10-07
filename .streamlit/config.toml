@@ -1,0 +1,14 @@
+# Streamlit settings for the demo app (app.py)
+[server]
+address = "127.0.0.1"      # reachable from this computer only
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "viewer"     # hide the Deploy button
+
+[theme]
+base = "light"             # reads better on most projectors
+primaryColor = "#2563eb"
