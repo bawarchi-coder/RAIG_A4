@@ -1,0 +1,41 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900637
+
+CAREER OBJECTIVE
+They are a software developer with 6 years of experience building e-commerce platforms. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy mentoring new joiners.
+
+PROFESSIONAL EXPERIENCE
+Senior Software Engineer at Velvetline Software | Jan 2024 - Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Software Engineering Intern at Zephyra Cloud | Aug 2021 - Dec 2023
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+- Deployed services on AWS Lambda and S3
+Junior Developer at Quantara Labs | Dec 2019 - Jul 2021
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+EDUCATIONAL QUALIFICATIONS
+BEng Software Engineering, [INSTITUTION], 2019 (First Class)
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React, AWS
+
+EXTRA-CURRICULAR ACTIVITIES
+- Server, Lakeside Restaurant (summer job)
+- Volunteer, Code Club
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

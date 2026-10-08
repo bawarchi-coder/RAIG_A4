@@ -12,6 +12,7 @@ import json
 import re
 import socket
 import sys
+import tempfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -23,9 +24,28 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / ".claude" / "skills" / "gender-fair-screening" / "scripts"))
 from pipeline import run as run_pipeline  # noqa: E402
 from redact_cv import redact_text  # noqa: E402
+from cv_signals import normalise_gender  # noqa: E402
 from screener_adapter import ScreenerError  # noqa: E402
 
 REGISTRY = json.loads((ROOT / "integration" / "screeners.json").read_text(encoding="utf-8"))
+DATASETS = {
+    "set1": {"label": "Dataset 1: Data Analyst, 30 CVs", "cvs": "data/cvs_raw", "jd": "data/job_description.md",
+             "labels": "data/gender_labels.csv", "top_k": 10, "role": "Data Analyst",
+             "about": "15 women and 15 men with matched qualifications, 5 twin pairs, one CV layout."},
+    "set2": {"label": "Dataset 2: Software Developer, 40 CVs", "cvs": "data2/cvs_raw",
+             "jd": "data2/job_description.md", "labels": "data2/gender_labels.csv", "top_k": 12,
+             "role": "Software Developer",
+             "about": "16 women and 24 men, 4 twin pairs, three CV layouts (UK, Indian biodata, US), "
+                      "different date formats and markers. Built to test the code."},
+}
+TOOL_HELP = {
+    "screener_a": "An old-style program the HR team runs on a folder of CVs. Secretly unfair: it adds points "
+                  "for male words, takes points off for female words, and takes 10 points off for a career gap.",
+    "screener_a_control": "The same program with its hidden rules switched off. This is what a fair result "
+                          "looks like, for comparison.",
+    "vendor_b": "A cloud service the HR team sends CVs to over the internet. It claims to be gender-blind and "
+                "never reads names or pronouns, but it penalises career gaps and part-time work.",
+}
 GENDER = {"male": "Men", "female": "Women"}
 SIGNAL = {"career_gap": "Career break or gap", "part_time": "Part-time work"}
 EXAMPLE_CV = """Mrs. Ananya Kapoor
@@ -149,48 +169,55 @@ def results_table(a):
 
 with st.sidebar:
     st.header("Setup")
+    ds_keys = list(DATASETS)
+    ds_start = ds_keys.index(st.query_params["dataset"]) if st.query_params.get("dataset") in ds_keys else 0
+    ds_name = st.selectbox("Candidate pool", ds_keys, index=ds_start, format_func=lambda k: DATASETS[k]["label"],
+                           help="Two fictional sets of CVs. Dataset 2 was made separately to test the code "
+                                "on CV layouts, date formats and markers it was not designed around.")
+    ds = DATASETS[ds_name]
+    st.caption(ds["about"])
     keys = list(REGISTRY)
     start = keys.index(st.query_params["run"]) if st.query_params.get("run") in keys else 0
-    name = st.selectbox("Existing screening tool", keys, index=start, format_func=lambda k: REGISTRY[k]["label"])
-    scr = REGISTRY[name]
-    if scr["type"] == "http":
-        if service_up(scr["url"]):
-            st.success(f"Service reachable at {scr['url']}")
-        else:
-            st.error("Vendor B is not running. Start it with `start_demo.bat` or "
-                     "`.venv\\Scripts\\python demo\\screener_service.py`.")
-    cv_dir = st.text_input("CV folder", "data/cvs_raw")
-    jd = st.text_input("Job description", "data/job_description.md")
-    labels_csv = st.text_input("Gender labels (audit only)", "data/gender_labels.csv")
-    top_k = st.number_input("Shortlist size", 1, 50, 10)
+    name = st.selectbox("Existing screening tool", keys, index=start, format_func=lambda k: REGISTRY[k]["label"],
+                        help="The software the HR team already uses. The fairness layer does not replace "
+                             "it: it hides gender before this tool sees the CVs and checks its results after.")
+    scr = dict(REGISTRY[name])
+    st.caption(TOOL_HELP[name])
+    if scr["type"] == "http" and not service_up(scr["url"]):
+        st.info("The Vendor B web service is not running here, so its offline copy (same scoring) is used.")
     run = st.button("Run fairness check", type="primary", width="stretch")
-    st.caption("Gender labels are used only for the audit. The screening tool never sees them.")
+    st.caption(f"Shortlist size: {ds['top_k']}. Gender labels are used only for the audit; "
+               "the screening tool never sees them.")
 
 st.title("⚖️ Gender-Fair CV Screening")
 st.markdown("**A plug-in fairness layer for CV screening:** it hides gender before screening "
-            "and checks the outcome after.")
+            "and checks the outcome after. *All candidates are fictional.*")
 
 if "runs" not in st.session_state:
     st.session_state.runs = {}
+if "workdir" not in st.session_state:  # each visitor gets their own output folder
+    st.session_state.workdir = Path(tempfile.mkdtemp(prefix="fairscreen_"))
+run_key = (ds_name, name)
 
-# A bookmark such as http://localhost:8501/?run=screener_a runs that tool on first load
+# A bookmark such as http://localhost:8501/?run=screener_a&dataset=set2 runs that tool on first load
 auto = st.query_params.get("run")
-if auto == name and name not in st.session_state.runs:
+if auto == name and run_key not in st.session_state.runs:
     run = True
 
 if run:
     with st.spinner(f"Redacting, screening with {scr['label']}, auditing and probing…"):
         try:
-            res = run_pipeline(ROOT / cv_dir, ROOT / jd, ROOT / labels_csv, scr, ROOT / "outputs" / "app" / name,
-                               tool_name=scr["label"], top_k=int(top_k), cwd=ROOT)
-            labels = pd.read_csv(ROOT / labels_csv, dtype=str).set_index("cv_id")["gender"].to_dict()
-            st.session_state.runs[name] = {"res": res, "labels": labels, "cv_dir": ROOT / cv_dir}
+            res = run_pipeline(ROOT / ds["cvs"], ROOT / ds["jd"], ROOT / ds["labels"], scr,
+                               st.session_state.workdir / ds_name / name, tool_name=scr["label"],
+                               role=ds["role"], top_k=ds["top_k"], cwd=ROOT)
+            labels = {k: normalise_gender(v) for k, v in
+                      pd.read_csv(ROOT / ds["labels"], dtype=str).set_index("cv_id")["gender"].items()}
+            st.session_state.runs[run_key] = {"res": res, "labels": labels, "cv_dir": ROOT / ds["cvs"],
+                                              "fallback": scr.get("used_fallback", False)}
         except ScreenerError as e:
             st.error(f"The screening tool failed: {e}")
-        except FileNotFoundError as e:
-            st.error(f"File not found: {e}")
 
-current = st.session_state.runs.get(name)
+current = st.session_state.runs.get(run_key)
 
 if current:
     res, labels = current["res"], current["labels"]
@@ -213,6 +240,8 @@ if current:
     rec = red["recommendation"]
     (st.error if rec.startswith("Do not") else st.warning if "conditions" in rec else st.success)(
         f"**Recommendation: {rec}.** A human makes the final decision.")
+    if current.get("fallback"):
+        st.caption("Vendor B was run from its offline copy because its web service is not running here.")
 
 tab_names = ["① Existing tool", "② Redaction", "③ Blind screening", "④ Proxy probe", "⑤ Report",
              "Try it: redact a CV", "All runs"]
@@ -335,10 +364,11 @@ with tabs[6]:
         st.info("Run the check for one or more tools to compare them here.")
     else:
         rows = []
-        for key, r in st.session_state.runs.items():
+        for (ds_key, key), r in st.session_state.runs.items():
             a0, a1 = r["res"]["raw"]["audit"], r["res"]["redacted"]["audit"]
             probe = r["res"]["redacted"]["probe"]["summary"]
-            rows.append({"Tool": REGISTRY[key]["label"],
+            rows.append({"Candidate pool": DATASETS[ds_key]["label"].split(",")[0],
+                         "Tool": REGISTRY[key]["label"],
                          "Impact ratio, raw": f"{a0['impact_ratio']:.2f} {a0['four_fifths']}",
                          "Impact ratio, redacted": f"{a1['impact_ratio']:.2f} {a1['four_fifths']}",
                          "Twins identical (raw → redacted)": f"{a0['twin_test']['identical']} → "

@@ -1,0 +1,356 @@
+<title>Gender-Fair CV Screening</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
+<style>
+/* Layout: one reading column; controls, verdict and three measures on top, detail in tabs below. */
+:root {
+  --bg: #f4f6f8; --surface: #ffffff; --ink: #18212b; --muted: #5a6573; --line: #d9dfe6;
+  --accent: #2d5be3; --accent-soft: rgba(45, 91, 227, 0.12);
+  --crit: #b73a28; --crit-soft: rgba(183, 58, 40, 0.10); --warn: #a8690f; --warn-soft: rgba(168, 105, 15, 0.12);
+  --good: #2a7a4b; --good-soft: rgba(42, 122, 75, 0.12);
+  --del: rgba(183, 58, 40, 0.18); --add: rgba(42, 122, 75, 0.18); --tape: #18212b; --tape-ink: #f4f6f8;
+  --dot-raw: #9aa3ae;
+  --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, "Courier New", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11161c; --surface: #19212a; --ink: #e6ebf0; --muted: #a3adb9; --line: #2c3743;
+  --accent: #7d9bff; --accent-soft: rgba(125, 155, 255, 0.16);
+  --crit: #f08a78; --crit-soft: rgba(240, 138, 120, 0.14); --warn: #e3b25e; --warn-soft: rgba(227, 178, 94, 0.14);
+  --good: #6fc794; --good-soft: rgba(111, 199, 148, 0.14);
+  --del: rgba(240, 138, 120, 0.22); --add: rgba(111, 199, 148, 0.22); --tape: #e6ebf0; --tape-ink: #11161c;
+  --dot-raw: #6f7a87; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #19212a; --ink: #e6ebf0; --muted: #a3adb9; --line: #2c3743;
+  --accent: #7d9bff; --accent-soft: rgba(125, 155, 255, 0.16);
+  --crit: #f08a78; --crit-soft: rgba(240, 138, 120, 0.14); --warn: #e3b25e; --warn-soft: rgba(227, 178, 94, 0.14);
+  --good: #6fc794; --good-soft: rgba(111, 199, 148, 0.14);
+  --del: rgba(240, 138, 120, 0.22); --add: rgba(111, 199, 148, 0.22); --tape: #e6ebf0; --tape-ink: #11161c;
+  --dot-raw: #6f7a87; color-scheme: dark; }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 22px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+h1 { font-family: var(--f-display); font-weight: 600; font-size: clamp(30px, 4.6vw, 42px); line-height: 1.1; letter-spacing: -0.01em; }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.lede { font-size: 17px; max-width: 62ch; margin: 10px 0 0; }
+.small { font-size: 13px; color: var(--muted); margin: 0; }
+header { display: grid; gap: 6px; }
+
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.control { display: grid; gap: 8px; min-width: 0; align-content: start; }
+.label { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.seg button { font: inherit; font-size: 14px; padding: 7px 12px; border-radius: 6px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); cursor: pointer; }
+.seg button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+.seg button:focus-visible, .tabs button:focus-visible, select:focus-visible, .toggle button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hint { font-size: 13.5px; color: var(--muted); margin: 0; max-width: 60ch; }
+
+.verdict { display: grid; gap: 6px; padding: 16px 18px; border-radius: 8px; border-left: 4px solid var(--v); background: var(--v-soft); }
+.verdict.crit { --v: var(--crit); --v-soft: var(--crit-soft); }
+.verdict.warn { --v: var(--warn); --v-soft: var(--warn-soft); }
+.verdict.good { --v: var(--good); --v-soft: var(--good-soft); }
+.verdict strong { color: var(--v); font-size: 17px; }
+.verdict p { margin: 0; max-width: 80ch; }
+
+.metrics { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 14px; }
+.metric { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; min-width: 0; align-content: start; }
+.metric .big { font-family: var(--f-mono); font-size: 28px; font-weight: 500; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.metric svg { width: 100%; height: auto; display: block; }
+.metric svg text { font-family: var(--f-mono); font-size: 11px; fill: var(--muted); }
+.pf { font-weight: 600; font-size: 13px; }
+.pf.pass { color: var(--good); } .pf.fail { color: var(--crit); }
+.pen { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+.pen b { font-family: var(--f-mono); color: var(--crit); font-weight: 500; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid var(--line); }
+.tabs button { font: inherit; font-size: 14px; padding: 9px 12px; border: 0; background: none; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.panel { display: grid; gap: 18px; min-width: 0; }
+.panel h2 { font-size: 18px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.two > * { min-width: 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.03em; }
+td.num, th.num { text-align: right; font-family: var(--f-mono); }
+.gap-bad { color: var(--crit); font-weight: 600; }
+.gap-ok { color: var(--good); }
+
+.strip { display: grid; gap: 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-family: var(--f-mono); font-size: 12px; min-width: 26px; text-align: center; padding: 3px 6px; border-radius: 4px; border: 1px solid var(--line); }
+.chip.w { background: var(--accent-soft); border-color: var(--accent); }
+.legend { display: flex; gap: 14px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+
+.cvpick { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+select { font: inherit; font-size: 14px; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+.cv { font-family: var(--f-mono); font-size: 12.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin: 0; }
+.cv mark { color: inherit; border-radius: 3px; padding: 0 2px; }
+.cv mark.del { background: var(--del); }
+.cv mark.add { background: var(--add); }
+.cv mark.tape { background: var(--tape); color: var(--tape-ink); padding: 0 4px; }
+.note { padding: 10px 14px; border-radius: 8px; font-size: 14px; background: var(--surface); border: 1px solid var(--line); }
+.note.ok { border-left: 4px solid var(--good); } .note.watch { border-left: 4px solid var(--warn); }
+details summary { cursor: pointer; font-size: 14px; color: var(--muted); }
+
+.toggle { display: flex; gap: 6px; flex-wrap: wrap; }
+.toggle button { font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.toggle button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+.report { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; display: grid; gap: 10px; min-width: 0; }
+.report h3 { font-family: var(--f-display); font-size: 22px; }
+.report h4 { font-size: 15px; margin-top: 8px; }
+.report p, .report ul, .report ol { margin: 0; max-width: 80ch; }
+.steps { margin: 0; padding-left: 22px; display: grid; gap: 8px; max-width: 75ch; }
+footer { border-top: 1px solid var(--line); padding-top: 14px; }
+
+@media (max-width: 760px) {
+  .controls, .metrics, .two { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: no-preference) { .seg button, .tabs button { transition: background 120ms, border-color 120ms; } }
+</style>
+
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Responsible AI and Governance · course demo</p>
+    <h1>Gender-Fair CV Screening</h1>
+    <p class="lede">A plug-in fairness layer for CV screening: it hides gender before an existing tool scores the CVs, then checks whether the shortlist that comes out is fair.</p>
+    <p class="small">Every candidate, employer and tool here is fictional. The results were produced by the project's own scripts and are stored in this page.</p>
+  </header>
+
+  <section class="controls" aria-label="Choose what to look at">
+    <div class="control"><span class="label" id="ds-label">Candidate pool</span><div class="seg" id="ds-seg" role="group" aria-labelledby="ds-label"></div><p class="hint" id="ds-hint"></p></div>
+    <div class="control"><span class="label" id="tool-label">Existing screening tool</span><div class="seg" id="tool-seg" role="group" aria-labelledby="tool-label"></div><p class="hint" id="tool-hint"></p></div>
+  </section>
+
+  <section class="verdict" id="verdict" aria-live="polite"></section>
+  <section class="metrics" id="metrics"></section>
+
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <section class="panel" id="panel" role="tabpanel"></section>
+
+  <footer><p class="small">The fairness layer runs three ways: as an AI agent skill (Claude Code), as a standalone app, and as an HTTP API for HR software. This page is a static copy of its results for demonstration. A human always makes the hiring decision.</p></footer>
+</main>
+
+<script id="demo-data" type="application/json">__DATA__</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById('demo-data').textContent);
+  const st = { ds: 'set1', tool: 'screener_a', tab: 'compare', cv: null, side: 'redacted' };
+  try { Object.assign(st, JSON.parse(localStorage.getItem('gfs-state') || '{}')); } catch (e) {}
+  if (!D.datasets[st.ds]) st.ds = 'set1';
+  if (!D.tools[st.tool]) st.tool = 'screener_a';
+  const save = () => { try { localStorage.setItem('gfs-state', JSON.stringify({ ds: st.ds, tool: st.tool, tab: st.tab })); } catch (e) {} };
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pct = x => x == null ? 'n/a' : Math.round(x * 100) + '%';
+  const f2 = x => x == null ? 'n/a' : x.toFixed(2);
+  const G = { male: 'Man', female: 'Woman' };
+  const GP = { male: 'Men', female: 'Women' };
+  const SIG = { career_gap: 'Career break or gap', part_time: 'Part-time work' };
+  const TABS = [['compare', 'Before and after'], ['redaction', 'Redaction'], ['probe', 'Proxy probe'], ['report', 'Report'], ['how', 'How it works']];
+  const pf = r => `<span class="pf ${r === 'PASS' ? 'pass' : 'fail'}">${r}</span>`;
+
+  function recommendation(md) {
+    const m = md.match(/## Recommendation\s*\n\*\*(.+?)\*\*\s*\n\s*\n(.+)/);
+    return m ? { rec: m[1], reason: m[2] } : { rec: '', reason: '' };
+  }
+
+  function seg(el, items, cur, pick) {
+    el.innerHTML = items.map(([k, l]) => `<button type="button" aria-pressed="${k === cur}" data-k="${k}">${esc(l)}</button>`).join('');
+    el.querySelectorAll('button').forEach(b => b.addEventListener('click', () => pick(b.dataset.k)));
+  }
+
+  function ruler(raw, red) {
+    const X = v => 16 + v * 408;
+    const ticks = [0, 0.2, 0.4, 0.6, 0.8, 1];
+    const lo = Math.min(raw, red), hi = Math.max(raw, red), same = Math.abs(raw - red) < 1e-9;
+    return `<svg viewBox="0 0 440 92" role="img" aria-label="Impact ratio ${f2(raw)} on raw CVs and ${f2(red)} on redacted CVs, against the 0.80 line">
+      ${ticks.map(t => `<line x1="${X(t)}" x2="${X(t)}" y1="30" y2="64" stroke="var(--line)"/><text x="${X(t)}" y="82" text-anchor="middle">${t.toFixed(1)}</text>`).join('')}
+      <line x1="${X(0.8)}" x2="${X(0.8)}" y1="18" y2="64" stroke="var(--muted)" stroke-dasharray="3 3"/>
+      <text x="${X(0.8) - 4}" y="14" text-anchor="end">0.80 line</text>
+      <line x1="${X(lo)}" x2="${X(hi)}" y1="47" y2="47" stroke="var(--accent)" stroke-width="3" stroke-opacity="0.45"/>
+      ${same ? '' : `<circle cx="${X(raw)}" cy="47" r="7" fill="var(--dot-raw)"/>`}
+      <circle cx="${X(red)}" cy="47" r="7" fill="var(--accent)"/>
+    </svg>`;
+  }
+
+  function md(text) {
+    const inline = s => esc(s.replace(/&nbsp;/g, ' ')).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
+    const L = text.split('\n'), out = [];
+    let i = 0;
+    while (i < L.length) {
+      const l = L[i];
+      if (!l.trim()) { i++; continue; }
+      if (l.startsWith('# ')) { out.push(`<h3>${inline(l.slice(2))}</h3>`); i++; continue; }
+      if (l.startsWith('## ')) { out.push(`<h4>${inline(l.slice(3))}</h4>`); i++; continue; }
+      if (l.startsWith('|')) {
+        const rows = [];
+        while (i < L.length && L[i].startsWith('|')) { rows.push(L[i]); i++; }
+        const cells = r => r.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+        const body = rows.filter(r => !/^\|[\s:|-]+\|?$/.test(r.trim()));
+        const [head, ...rest] = body;
+        out.push(`<div class="scroll"><table><thead><tr>${cells(head).map(c => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${rest.map(r => `<tr>${cells(r).map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+        continue;
+      }
+      if (/^\d+\. /.test(l) || l.startsWith('- ')) {
+        const ordered = /^\d+\. /.test(l), items = [];
+        while (i < L.length && (ordered ? /^\d+\. /.test(L[i]) : L[i].startsWith('- '))) { items.push(L[i].replace(/^(\d+\. |- )/, '')); i++; }
+        const tag = ordered ? 'ol' : 'ul';
+        out.push(`<${tag}>${items.map(t => `<li>${inline(t)}</li>`).join('')}</${tag}>`);
+        continue;
+      }
+      const para = [];
+      while (i < L.length && L[i].trim() && !/^(#|\||- |\d+\. )/.test(L[i])) { para.push(L[i]); i++; }
+      out.push(`<p>${inline(para.join(' '))}</p>`);
+    }
+    return out.join('');
+  }
+
+  function markRaw(text, changes) {
+    const byLine = {};
+    changes.forEach(([line, orig]) => { const m = byLine[line] = byLine[line] || {}; m[orig] = (m[orig] || 0) + 1; });
+    return text.replace(/\n$/, '').split('\n').map((line, n) => {
+      let h = esc(line);
+      Object.entries(byLine[n + 1] || {}).sort((a, b) => b[0].length - a[0].length).forEach(([orig, count]) => {
+        const o = esc(orig);
+        if (!o) return;
+        const edge = /\w/.test(o[0]) && /\w/.test(o.at(-1)) ? '\\b' : '';
+        let left = count;
+        h = h.replace(new RegExp(`(?<!>)${edge}${escRe(o)}${edge}`, 'g'), m => left-- > 0 ? `<mark class="del">${m}</mark>` : m);
+      });
+      return h;
+    }).join('\n');
+  }
+
+  function markRed(text, changes) {
+    let h = esc(text.replace(/\n$/, ''));
+    const words = [...new Set(changes.map(c => c[2]).filter(Boolean).map(esc))].filter(w => !/^\[[A-Z]+\]$/.test(w));
+    if (words.length) {
+      h = h.replace(new RegExp(`(?<![\\w\\[])(${words.sort((a, b) => b.length - a.length).map(escRe).join('|')})(?![\\w\\]])`, 'g'), '<mark class="add">$1</mark>');
+    }
+    return h.replace(/\[(CANDIDATE|EMAIL|PROFILE|INSTITUTION)\]/g, '<mark class="tape">[$1]</mark>');
+  }
+
+  function renderTop() {
+    const ds = D.datasets[st.ds], run = ds.runs[st.tool];
+    seg($('ds-seg'), Object.entries(D.datasets).map(([k, v]) => [k, v.label]), st.ds, k => { st.ds = k; st.cv = null; save(); render(); });
+    $('ds-hint').textContent = ds.short + `. Shortlist of ${ds.top_k}.`;
+    seg($('tool-seg'), Object.entries(D.tools).map(([k, v]) => [k, v.label]), st.tool, k => { st.tool = k; save(); render(); });
+    $('tool-hint').textContent = D.tools[st.tool].about;
+
+    const { rec, reason } = recommendation(run.redacted.report);
+    const v = $('verdict');
+    v.className = 'verdict ' + (rec.startsWith('Do not') ? 'crit' : rec.includes('conditions') ? 'warn' : 'good');
+    v.innerHTML = `<strong>${esc(rec)}</strong><p>${esc(reason)}</p><p class="small">With the fairness layer in place. A named person makes the final decision.</p>`;
+
+    const ra = run.raw.audit, rd = run.redacted.audit, ps = run.redacted.probe.summary;
+    const pens = Object.entries(ps).filter(([, s]) => s.cvs_penalised);
+    $('metrics').innerHTML = `
+      <div class="metric"><span class="label">Impact ratio, lower rate ÷ higher rate</span>
+        ${ruler(ra.impact_ratio, rd.impact_ratio)}
+        <div class="pen"><span>Raw CVs <b style="color:var(--ink)">${f2(ra.impact_ratio)}</b> ${pf(ra.four_fifths)}</span><span>Redacted CVs <b style="color:var(--ink)">${f2(rd.impact_ratio)}</b> ${pf(rd.four_fifths)}</span></div></div>
+      <div class="metric"><span class="label">Twin pairs scored the same</span>
+        <span class="big">${rd.twin_test.identical} / ${rd.twin_test.pairs}</span>
+        <p class="small">after redaction; ${ra.twin_test.identical} / ${ra.twin_test.pairs} on raw CVs</p></div>
+      <div class="metric"><span class="label">Proxy penalties found</span>
+        ${pens.length ? pens.map(([k, s]) => `<div class="pen"><span>${SIG[k]}</span><b>−${s.mean_penalty_points.toFixed(1)} pts</b></div>`).join('') + `<p class="small">average points lost, after redaction</p>` : `<span class="big" style="color:var(--good)">None</span><p class="small">no penalty for career breaks or part-time work</p>`}</div>`;
+  }
+
+  function panelCompare(ds, run) {
+    const ra = run.raw.audit, rd = run.redacted.audit;
+    const row = (name, f) => `<tr><td>${name}</td><td class="num">${f(ra.groups.male)}</td><td class="num">${f(ra.groups.female)}</td><td class="num">${f(rd.groups.male)}</td><td class="num">${f(rd.groups.female)}</td></tr>`;
+    const after = Object.fromEntries(rd.twin_test.details.map(t => [t.pair, t]));
+    const strip = (rank, title) => `<div class="strip"><span class="label">${title}</span><div class="chips">${rank.filter(r => r.shortlisted).map(r => `<span class="chip ${ds.labels[r.cv_id] === 'female' ? 'w' : ''}" title="${r.cv_id}, score ${r.score}">${ds.labels[r.cv_id] === 'female' ? 'W' : 'M'}</span>`).join('')}</div></div>`;
+    return `
+      <div class="two">
+        <div><h2>Who gets shortlisted</h2><div class="scroll"><table>
+          <thead><tr><th></th><th class="num">Men, raw</th><th class="num">Women, raw</th><th class="num">Men, redacted</th><th class="num">Women, redacted</th></tr></thead>
+          <tbody>${row('Candidates', g => g.candidates)}${row('Shortlisted', g => g.shortlisted)}${row('Selection rate', g => pct(g.selection_rate))}${row('Mean score', g => g.mean_score.toFixed(1))}</tbody></table></div>
+          <p class="small">Fisher's exact test: p = ${ra.fisher_exact_p.toFixed(3)} on raw CVs, p = ${rd.fisher_exact_p.toFixed(3)} after redaction. With this few candidates, results are indicative, not conclusive.</p></div>
+        <div class="strip-wrap" style="display:grid;gap:14px;align-content:start">
+          <h2>The shortlist, in rank order</h2>
+          ${strip(run.raw.ranking, 'Raw CVs')}${strip(run.redacted.ranking, 'Redacted CVs')}
+          <div class="legend"><span><span class="chip w">W</span> woman</span><span><span class="chip">M</span> man</span></div></div>
+      </div>
+      <div><h2>Twin test: CVs identical except for gender markers</h2><div class="scroll"><table>
+        <thead><tr><th>Pair</th><th>Man</th><th>Woman</th><th class="num">Gap, raw</th><th class="num">Gap, redacted</th></tr></thead>
+        <tbody>${ra.twin_test.details.map(t => `<tr><td>${t.pair}</td><td>${t.man}</td><td>${t.woman}</td><td class="num ${t.identical ? 'gap-ok' : 'gap-bad'}">${t.difference_man_minus_woman > 0 ? '+' : ''}${t.difference_man_minus_woman.toFixed(1)}</td><td class="num ${after[t.pair].identical ? 'gap-ok' : 'gap-bad'}">${after[t.pair].difference_man_minus_woman.toFixed(1)}</td></tr>`).join('')}</tbody></table></div>
+        <p class="small">A positive gap means the man scored higher than his identical twin.</p></div>`;
+  }
+
+  function panelRedaction(ds) {
+    const ids = Object.keys(ds.cvs);
+    if (!st.cv || !ds.cvs[st.cv]) st.cv = ids.find(id => ds.cvs[id].changes.some(c => c[3] === 'career_break_reason')) || ids[0];
+    const cv = ds.cvs[st.cv], r = ds.redaction;
+    const oneSided = ds.leaks.one_sided.map(t => `“${esc(t.term)}” on ${t.cvs} ${t.only_in === 'female' ? "women's" : "men's"} CVs only`).join('; ');
+    return `
+      <div class="two">
+        <div class="note ok"><strong>${r.files_redacted} CVs redacted, ${r.changes} changes.</strong> Leak check: ${ds.leaks.count} gender markers left after redaction.</div>
+        <div class="note watch">${oneSided ? `For a human to review: ${oneSided}. Not markers, but they can reveal gender.` : 'No words appear only on one gender’s CVs.'}</div>
+      </div>
+      <div class="cvpick"><label for="cv-select" class="label">Compare a CV</label>
+        <select id="cv-select">${ids.map(id => `<option value="${id}" ${id === st.cv ? 'selected' : ''}>${id} · ${G[ds.labels[id]] || ''} · ${ds.cvs[id].changes.length} changes</option>`).join('')}</select></div>
+      <div class="two">
+        <div style="display:grid;gap:6px"><span class="label">Before: red is removed or replaced</span><pre class="cv">${markRaw(cv.raw, cv.changes)}</pre></div>
+        <div style="display:grid;gap:6px"><span class="label">After: what the screening tool sees</span><pre class="cv">${markRed(cv.red, cv.changes)}</pre></div>
+      </div>
+      <details><summary>Change log for ${st.cv} (${cv.changes.length} changes)</summary><div class="scroll"><table>
+        <thead><tr><th class="num">Line</th><th>Original</th><th>Replacement</th><th>Rule</th></tr></thead>
+        <tbody>${cv.changes.map(c => `<tr><td class="num">${c[0]}</td><td>${esc(c[1])}</td><td>${esc(c[2]) || '<span class="small">removed</span>'}</td><td>${esc(c[3].replace(/_/g, ' '))}</td></tr>`).join('')}</tbody></table></div></details>`;
+  }
+
+  function panelProbe(ds, run) {
+    const p = run.redacted.probe;
+    return `
+      <p style="margin:0;max-width:75ch">Each CV with a proxy signal is scored again <strong>with only that signal removed</strong>: the career break taken out with total experience kept the same, or the words “part-time” deleted. A positive change means the signal was costing the candidate points.</p>
+      <div class="two">${Object.entries(p.summary).map(([k, s]) => `<div class="metric"><span class="label">${SIG[k]}</span><span class="big" style="color:${s.cvs_penalised ? 'var(--crit)' : 'var(--good)'}">${s.cvs_penalised ? '−' + s.mean_penalty_points.toFixed(1) + ' pts' : 'No penalty'}</span><p class="small">${s.cvs_penalised} of ${s.cvs_tested} CVs penalised</p></div>`).join('')}</div>
+      <div class="scroll"><table><thead><tr><th>CV</th><th>Gender</th><th>Signal</th><th class="num">Score with it</th><th class="num">Score without it</th><th class="num">Change</th></tr></thead>
+        <tbody>${p.tests.map(t => `<tr><td>${t.cv_id}</td><td>${G[ds.labels[t.cv_id]] || ''}</td><td>${SIG[t.signal]}</td><td class="num">${t.score_with_signal.toFixed(1)}</td><td class="num">${t.score_without_signal.toFixed(1)}</td><td class="num ${t.penalised ? 'gap-bad' : 'gap-ok'}">${t.change > 0 ? '+' : ''}${t.change.toFixed(1)}</td></tr>`).join('')}</tbody></table></div>
+      <p class="small">${esc(p.finding)}</p>`;
+  }
+
+  function panelReport(run) {
+    return `<div class="toggle" role="group" aria-label="Which report">
+        <button type="button" data-side="redacted" aria-pressed="${st.side === 'redacted'}">With the fairness layer</button>
+        <button type="button" data-side="raw" aria-pressed="${st.side === 'raw'}">The tool as used today</button></div>
+      <article class="report">${md(run[st.side].report)}</article>`;
+  }
+
+  function panelHow() {
+    return `<ol class="steps">
+      <li><strong>Redact.</strong> Names, pronouns, titles, family names, date of birth, photo lines, single-sex colleges, gendered team names and the reasons for career breaks are replaced or removed. Skills, jobs, employers, dates and grades are never touched.</li>
+      <li><strong>Leak check.</strong> The redacted CVs are scanned for anything that still gives gender away, including names hidden in web addresses and words used on one gender's CVs only.</li>
+      <li><strong>Blind screening.</strong> The organisation's existing tool scores the redacted CVs. It is treated as a black box: CVs in, scores out, its code never read.</li>
+      <li><strong>Audit.</strong> Selection rates by gender, the impact ratio against the four-fifths (0.80) rule, Fisher's exact test, and the twin test.</li>
+      <li><strong>Proxy probe.</strong> Career breaks and part-time work are removed one at a time to see whether the tool penalises them.</li>
+      <li><strong>Report.</strong> A one-page report with a recommendation for a named person, who makes the decision.</li></ol>
+      <p class="small">Gender labels are used only for the audit and never reach the screening tool.</p>`;
+  }
+
+  function render() {
+    renderTop();
+    const ds = D.datasets[st.ds], run = ds.runs[st.tool];
+    const tabs = $('tabs');
+    tabs.innerHTML = TABS.map(([k, l]) => `<button type="button" role="tab" aria-selected="${k === st.tab}" data-t="${k}">${l}</button>`).join('');
+    tabs.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { st.tab = b.dataset.t; save(); render(); }));
+    const P = $('panel');
+    P.innerHTML = st.tab === 'redaction' ? panelRedaction(ds) : st.tab === 'probe' ? panelProbe(ds, run)
+      : st.tab === 'report' ? panelReport(run) : st.tab === 'how' ? panelHow() : panelCompare(ds, run);
+    const sel = $('cv-select');
+    if (sel) sel.addEventListener('change', () => { st.cv = sel.value; render(); });
+    P.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => { st.side = b.dataset.side; render(); }));
+  }
+
+  const hash = location.hash.slice(1);
+  if (TABS.some(([k]) => k === hash)) st.tab = hash;
+  render();
+})();
+</script>

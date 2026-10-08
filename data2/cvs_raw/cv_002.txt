@@ -1,0 +1,32 @@
+Edward Wade
+edward.wade@example.org | +44 7700 900997 | www.edwardwade.dev
+Pronouns: he/him
+
+Profile
+I am a software developer with 6 years of experience building gaming backends. I have shipped features used by thousands of customers and I enjoy mentoring new joiners.
+
+Work Experience
+Senior Software Engineer, Ironbark Systems | 03/2024 – present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Graduate Software Engineer, Kitewing Labs | 12/2021 – 02/2024
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+- Deployed services on AWS Lambda and S3
+Software Engineering Intern, Lumora Apps | 04/2020 – 11/2021
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+Education
+BSc Computer Science, Delbridge University, 2019 (First Class)
+
+Technical Skills
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React, AWS
+
+Interests
+- Men's badminton team
+- Contributor to open-source projects

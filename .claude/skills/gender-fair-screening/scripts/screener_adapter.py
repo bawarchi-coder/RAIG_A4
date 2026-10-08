@@ -89,11 +89,23 @@ def run_http(url, cvs_dir, jd_path, top_k, timeout=120):
 
 
 def run_screener(screener, cvs_dir, jd_path, top_k=10, cwd=None):
-    """screener: {"type": "command", "cmd": ...} or {"type": "http", "url": ...}."""
+    """screener: {"type": "command", "cmd": ...} or {"type": "http", "url": ...}.
+
+    An http screener may also give "fallback_cmd": an offline copy of the same
+    tool, used only when the service cannot be reached (for example on a cloud
+    host that runs a single app). The caller can check screener["used_fallback"].
+    """
     if screener.get("type") == "command":
         rows = run_command(screener["cmd"], cvs_dir, jd_path, top_k, cwd=cwd)
     elif screener.get("type") == "http":
-        rows = run_http(screener["url"], cvs_dir, jd_path, top_k)
+        try:
+            rows = run_http(screener["url"], cvs_dir, jd_path, top_k)
+            screener["used_fallback"] = False
+        except ScreenerError:
+            if not screener.get("fallback_cmd"):
+                raise
+            rows = run_command(screener["fallback_cmd"], cvs_dir, jd_path, top_k, cwd=cwd)
+            screener["used_fallback"] = True
     else:
         raise ScreenerError(f"unknown screener type: {screener.get('type')}")
     return normalise(rows, top_k)

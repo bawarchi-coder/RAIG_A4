@@ -12,6 +12,7 @@
   "vendor_b": {
     "label": "Vendor B TalentRank: cloud service over HTTP",
     "type": "http",
-    "url": "http://127.0.0.1:8001/score"
+    "url": "http://127.0.0.1:8001/score",
+    "fallback_cmd": "python demo/screener_service.py --cvs {cvs} --jd {jd} --out {out} --top-k {top_k}"
   }
 }

@@ -1,0 +1,28 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900572 | [PROFILE]
+
+Profile
+I am a software developer with 2 years of experience building learning platforms. I have shipped features used by thousands of customers and I enjoy clean, well-tested code.
+
+Work Experience
+Full Stack Developer, Copperfield IT | 04/2025 – present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Graduate Software Engineer, Quantara Labs | 02/2024 – 03/2025
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+
+Education
+BEng Computer Engineering, [INSTITUTION], 2023 (Upper Second (2:1))
+A levels / Class XII, [INSTITUTION], 2020: School captain
+
+Technical Skills
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing
+
+Interests
+- badminton team
+- Server, Lakeside Restaurant (summer job)
+- Contributor to open-source projects

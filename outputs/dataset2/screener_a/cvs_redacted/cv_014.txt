@@ -1,0 +1,23 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900968 | [PROFILE]
+
+SUMMARY
+I am a software developer with 2 years of experience building public sector websites. I have shipped features used by thousands of customers and I enjoy fixing hard bugs.
+
+EXPERIENCE
+Full Stack Developer | Copperfield IT | October 2024 – Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+- Fixed front-end bugs in JavaScript
+- Designed a REST API for partner integrations
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API
+
+LEADERSHIP & ACTIVITIES
+- Treasurer, university student society
+- Member, basketball team
+- Server, Lakeside Restaurant (summer job)
+- Contributor to open-source projects

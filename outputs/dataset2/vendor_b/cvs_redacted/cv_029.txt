@@ -1,0 +1,21 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900760 | [PROFILE]
+
+Profile
+They are a software developer with 1 year of experience building HR software. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy clean, well-tested code.
+
+Work Experience
+Full Stack Developer, Northlake Digital | 10/2025 – present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+
+Education
+BSc Mathematics, [INSTITUTION], 2025 (Upper Second (2:1))
+
+Technical Skills
+Python, SQL, Git
+
+Interests
+- badminton team
+- Contributor to open-source projects

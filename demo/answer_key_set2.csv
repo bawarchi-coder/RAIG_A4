@@ -1,0 +1,41 @@
+cv_id,gender,profile,twin_pair_id,style,career_break,part_time,name
+cv_001,F,S06,,us,Sabbatical (caring for family),yes,Bhavna Wade
+cv_002,M,E01,,uk,,,Edward Wade
+cv_003,F,S16,,uk,,,Aditi Agarwal
+cv_004,M,S06,,us,,,Jack Ghosh
+cv_005,M,S04,,biodata,Paternity leave,,Chirag Malhotra
+cv_006,F,S05,T2,biodata,,,Kritika Ghosh
+cv_007,M,S14,,us,,,Faisal Kulkarni
+cv_008,M,E06,,us,,yes,Liam Dutta
+cv_009,M,E07,,biodata,,,Benjamin Kulkarni
+cv_010,F,S04,,us,,,Nandini Ghosh
+cv_011,F,S13,,biodata,,yes,Jasmine Yadav
+cv_012,M,E08,,us,,,Manish Thakur
+cv_013,M,E03,,biodata,Career break (travel),,Ishaan Ghosh
+cv_014,M,S13,,us,,,Rajat Ghosh
+cv_015,F,S09,,us,Maternity leave,,Gauri Saxena
+cv_016,F,S01,,biodata,Maternity leave,,Deepa Kulkarni
+cv_017,F,S03,,us,Career break (maternity and childcare),,Isha Agarwal
+cv_018,M,S11,,uk,,,Kunal Ghosh
+cv_019,M,S08,T3,us,,,Oscar Saxena
+cv_020,M,S07,,uk,,,William Lawson
+cv_021,F,S10,,uk,,yes,Harriet Chopra
+cv_022,F,S08,T3,us,,,Mehak Hale
+cv_023,F,S02,T1,biodata,,,Farah Upadhyay
+cv_024,M,S01,,us,,,Harry Pillai
+cv_025,F,S12,T4,us,,,Olivia Kulkarni
+cv_026,M,E05,,biodata,,,Pranav Kulkarni
+cv_027,M,E02,,biodata,,,Vivek Pillai
+cv_028,M,S03,,us,,,Utkarsh Wade
+cv_029,M,S16,,uk,,,Gaurav Wade
+cv_030,M,S15,,uk,,,Sameer Yadav
+cv_031,F,S11,,us,unexplained gap,,Eleanor Fernandes
+cv_032,M,S09,,uk,,,Yash Thakur
+cv_033,M,S05,T2,biodata,,,Dev Wade
+cv_034,M,S10,,us,,,Noah Wade
+cv_035,F,S14,,uk,,,Charlotte Banerjee
+cv_036,M,S02,T1,biodata,,,Abhishek Ghosh
+cv_037,F,S07,,us,,,Pooja Agarwal
+cv_038,F,S15,,us,,,Lucy Malhotra
+cv_039,M,E04,,biodata,,,Tushar Pillai
+cv_040,M,S12,T4,us,,,Zubin Upadhyay

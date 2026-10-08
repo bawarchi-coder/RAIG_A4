@@ -1,0 +1,29 @@
+Eleanor Fernandes
+eleanor.fernandes@example.org | +44 7700 900532 | www.eleanorfernandes.dev
+Pronouns: she/her
+
+SUMMARY
+She is a software developer with 2 years of experience building learning platforms. She has shipped features used by thousands of customers. Her colleagues value her calm approach. She enjoys clean, well-tested code.
+
+EXPERIENCE
+Full Stack Developer | Bramble Data | April 2025 – Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Graduate Software Engineer | Brightwire Systems | April 2023 – May 2024
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+
+EDUCATION
+BEng Computer Engineering, Easterbrook Institute of Technology, 2022 (Upper Second (2:1))
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing
+
+LEADERSHIP & ACTIVITIES
+- Member, Women's basketball team
+- Hostess, Lakeside Restaurant (summer job)
+- Volunteer, Women Who Code
+- Contributor to open-source projects

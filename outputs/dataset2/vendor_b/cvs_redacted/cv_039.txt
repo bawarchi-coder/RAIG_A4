@@ -1,0 +1,38 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900394
+
+CAREER OBJECTIVE
+They are a software developer with 3 years of experience building analytics platforms. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy working closely with designers.
+
+PROFESSIONAL EXPERIENCE
+Software Engineer at Pinecrest Solutions | Oct 2024 - Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Software Engineering Intern at Orchard Logic | Feb 2023 - Sep 2024
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+- Worked in two-week Agile sprints
+
+EDUCATIONAL QUALIFICATIONS
+BSc Computer Science, [INSTITUTION], 2022 (Upper Second (2:1))
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, basketball team
+- Server, Lakeside Restaurant (summer job)
+- Volunteer, Code Club
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

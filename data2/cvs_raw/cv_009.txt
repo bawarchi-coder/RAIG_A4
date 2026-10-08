@@ -1,0 +1,38 @@
+CURRICULUM VITAE
+
+Name: Shri Benjamin Kulkarni
+S/o Shri Vinod Kulkarni
+Email: benjamin.kulkarni17@example.com
+Mobile: +44 7700 900670
+
+CAREER OBJECTIVE
+He is a software developer with 1 year of experience building marketplace search. He has shipped features used by thousands of customers. His colleagues value his calm approach. He enjoys fixing hard bugs.
+
+PROFESSIONAL EXPERIENCE
+Backend Developer at Kitewing Labs | Apr 2025 - Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+- Fixed front-end bugs in JavaScript
+
+EDUCATIONAL QUALIFICATIONS
+BSc Information Technology, Easterbrook Institute of Technology, 2024 (Lower Second (2:2))
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript
+
+EXTRA-CURRICULAR ACTIVITIES
+- Volunteer, Code Club
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Sex: Male
+Age: 23 years
+Marital Status: Married
+Nationality: Indian
+[Photograph attached]
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.
+(Benjamin Kulkarni)

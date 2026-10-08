@@ -26,13 +26,17 @@ from pathlib import Path
 KEYWORD_BANK = ["SQL", "Excel", "Python", "dashboards", "reporting",
                 "statistics", "Tableau", "data cleaning", "Power BI",
                 "stakeholder", "ETL", "A/B testing", "machine learning",
-                "pandas", "R", "Looker", "Spark"]
+                "pandas", "R", "Looker", "Spark",
+                # software roles
+                "Java", "JavaScript", "Git", "REST API", "unit testing", "Agile", "Docker",
+                "React", "AWS", "CI/CD", "Kubernetes", "Linux", "C++", "TypeScript"]
 MONTH = {m: i for i, m in enumerate(
     ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"])}
-RANGE = re.compile(
-    r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{4})\s*(?:to|–|—|-)\s*"
-    r"(?:(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{4})|(present|current|now))",
-    re.IGNORECASE)
+# A date is "Mar 2021", "March 2021", "03/2021" or "2021"
+DATE = (r"(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{4}"
+        r"|(?<!\d)\d{1,2}/\d{4}(?!\d)|(?<![\d/])\d{4}(?!\d))")
+RANGE = re.compile(rf"({DATE})\s*(?:to|–|—|-)\s*({DATE}|present|current|now)\b", re.IGNORECASE)
+NOT_A_JOB = re.compile(r"\b(?:break|leave|sabbatical|gap)\b", re.IGNORECASE)
 AS_OF = date(2026, 9, 1)
 
 # Hidden bias lexicons (titles are matched case-sensitively)
@@ -56,21 +60,28 @@ def jd_keywords(jd_text):
     return [k for k in KEYWORD_BANK if keyword_pattern(k).search(jd_text)]
 
 
+def to_month(token, is_end=False):
+    t = token.strip()
+    if re.fullmatch(r"present|current|now", t, re.IGNORECASE):
+        return AS_OF.year * 12 + AS_OF.month - 1
+    m = re.match(r"([A-Za-z]+)\.?\s+(\d{4})", t)
+    if m:
+        return int(m.group(2)) * 12 + MONTH[m.group(1).lower()[:3]]
+    m = re.fullmatch(r"(\d{1,2})/(\d{4})", t)
+    if m:
+        return int(m.group(2)) * 12 + int(m.group(1)) - 1
+    return int(t) * 12 + (11 if is_end else 0)
+
+
 def employment(text):
-    """Employment intervals as (start, end) month indexes, career breaks excluded."""
+    """Employment intervals as (start, end) month indexes; breaks and leave excluded."""
     jobs = []
     for line in text.splitlines():
-        if "break" in line.lower():
+        if NOT_A_JOB.search(line):
             continue
         m = RANGE.search(line)
-        if not m:
-            continue
-        start = int(m.group(2)) * 12 + MONTH[m.group(1).lower()[:3]]
-        if m.group(5):
-            end = AS_OF.year * 12 + AS_OF.month - 1
-        else:
-            end = int(m.group(4)) * 12 + MONTH[m.group(3).lower()[:3]]
-        jobs.append((start, end))
+        if m:
+            jobs.append((to_month(m.group(1)), to_month(m.group(2), is_end=True)))
     return sorted(jobs)
 
 

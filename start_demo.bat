@@ -14,7 +14,7 @@ if not exist ".venv\Scripts\python.exe" (
 )
 start "Vendor B (demo screener)" .venv\Scripts\python.exe demo\screener_service.py
 start "Fairness API" .venv\Scripts\python.exe -m uvicorn integration.api:app --host 127.0.0.1 --port 8000
-start "Fairness app" .venv\Scripts\python.exe -m streamlit run app.py
+start "Fairness app" .venv\Scripts\python.exe -m streamlit run app.py --server.address 127.0.0.1
 timeout /t 6 /nobreak >nul
-start "" "http://127.0.0.1:8501/?run=screener_a"
+start "" "http://127.0.0.1:8501/?run=screener_a&dataset=set1"
 start "" "http://127.0.0.1:8000/docs"

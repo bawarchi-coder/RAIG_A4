@@ -1,0 +1,31 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900827
+
+CAREER OBJECTIVE
+They are a software developer with 2 years of experience building public sector websites. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy fixing hard bugs.
+
+PROFESSIONAL EXPERIENCE
+Full Stack Developer (Part-time) at Kitewing Labs | Oct 2024 - Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+- Fixed front-end bugs in JavaScript
+- Designed a REST API for partner integrations
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, basketball team
+- Server, Lakeside Restaurant (summer job)
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

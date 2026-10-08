@@ -1,0 +1,29 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900618
+
+SUMMARY
+They are a software developer with 4 years of experience building telecom billing. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy clean, well-tested code.
+
+EXPERIENCE
+Software Engineer | Bramble Data | March 2024 – Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+- Packaged services with Docker
+Associate Developer | Kitewing Labs | February 2022 – February 2024
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+- Worked in two-week Agile sprints
+
+EDUCATION
+BSc Mathematics and Computing, [INSTITUTION], 2021 (First Class)
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker
+
+LEADERSHIP & ACTIVITIES
+- Member, basketball team
+- Volunteer, Code Club
+- Contributor to open-source projects

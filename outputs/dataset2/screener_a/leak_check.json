@@ -1,0 +1,32 @@
+{
+  "files_checked": 40,
+  "leak_count": 0,
+  "leaks": [],
+  "one_sided_terms": [
+    {
+      "term": "club",
+      "only_in": "male",
+      "cvs": 11
+    },
+    {
+      "term": "coding",
+      "only_in": "female",
+      "cvs": 9
+    },
+    {
+      "term": "community",
+      "only_in": "female",
+      "cvs": 9
+    },
+    {
+      "term": "apr",
+      "only_in": "male",
+      "cvs": 3
+    },
+    {
+      "term": "january",
+      "only_in": "male",
+      "cvs": 3
+    }
+  ]
+}

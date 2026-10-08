@@ -1,0 +1,30 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900996
+
+SUMMARY
+They are a software developer with 5 years of experience building banking apps. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy improving developer tooling.
+
+EXPERIENCE
+Software Developer | Ironbark Systems | July 2024 – Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Junior Developer | Northlake Digital | July 2022 – June 2024
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+Software Engineering Intern | Tidewater Digital | February 2021 – June 2022
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+EDUCATION
+BTech Information Technology, [INSTITUTION], 2020 (CGPA 8.4/10)
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React
+
+LEADERSHIP & ACTIVITIES
+- Member, basketball team
+- Contributor to open-source projects

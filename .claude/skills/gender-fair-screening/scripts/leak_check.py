@@ -26,6 +26,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from cv_signals import normalise_gender  # noqa: E402
 from redact_cv import TITLES, name_from, name_tokens  # noqa: E402
 
 LEXICON = [
@@ -36,12 +37,12 @@ LEXICON = [
         r"womens|mens|mother|father|wife|husband|son|daughter)(?:'s|’s|'|’)?(?![\w])", re.I)),
     ("family_or_status", re.compile(
         r"\b(?:spouse|married|unmarried|widow(?:ed|er)?|divorced|[SDW]/o)\b", re.I)),
-    ("personal_field", re.compile(r"\b(?:date of birth|d\.o\.b|gender|photo(?:graph)?)\b", re.I)),
+    ("personal_field", re.compile(r"\b(?:date of birth|d\.o\.b|gender|photo(?:graph)?|pronouns?|n[ée]e)\b", re.I)),
     ("break_reason", re.compile(
         r"\b(?:maternity|paternity|pregnan\w*|child\s?care|parental leave|homemaker|housewife|"
         r"househusband)\b", re.I)),
     ("gendered_job_word", re.compile(
-        r"\b(?:chairman|chairwoman|salesman|saleswoman|salesgirl|waitress|waiter|spokesman|"
+        r"\b(?:chairman|chairwoman|salesman|saleswoman|salesgirl|waitress|waiter|hostess|busboy|spokesman|"
         r"spokeswoman|foreman|forewoman|businessman|businesswoman|policeman|policewoman|"
         r"stewardess|head girl|head boy)\b", re.I)),
     ("gendered_organisation", re.compile(
@@ -63,6 +64,7 @@ def check_texts(texts, names=()):
     """texts: {cv_id: redacted text}. Returns a list of leak dicts."""
     leaks = []
     name_re = re.compile(r"\b(" + "|".join(map(re.escape, sorted(names))) + r")\b") if names else None
+    lower_names = [nm.lower() for nm in names if len(nm) >= 4]
     for cv_id, text in texts.items():
         for n, line in enumerate(text.splitlines(), start=1):
             for rule, pattern in LEXICON:
@@ -73,11 +75,18 @@ def check_texts(texts, names=()):
                 for m in name_re.finditer(line):
                     leaks.append({"cv_id": cv_id, "line": n, "marker": m.group(0),
                                   "rule": "candidate_name", "text": line.strip()})
+                # names hidden inside web addresses or handles, e.g. www.priyaiyer.dev
+                for tok in re.findall(r"[^\s|,;()]*[./@][^\s|,;()]*", line):
+                    hits = [nm for nm in lower_names if nm in tok.lower()]
+                    if hits:
+                        leaks.append({"cv_id": cv_id, "line": n, "marker": tok,
+                                      "rule": "candidate_name_in_link", "text": line.strip()})
     return leaks
 
 
 def one_sided_terms(texts, labels, min_count=3):
     """Terms present in >= min_count CVs of one group and in none of the other."""
+    labels = {k: normalise_gender(v) for k, v in labels.items()}
     groups = sorted({labels[c] for c in texts if c in labels})
     if len(groups) != 2:
         return []

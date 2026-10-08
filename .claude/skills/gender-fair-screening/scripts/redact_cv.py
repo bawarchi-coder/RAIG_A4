@@ -37,6 +37,7 @@ REMOVE_LINE = [
         r"^\s*(?:[-*•]\s*)?(?:(?:father|mother|husband|wife|spouse|guardian)(?:'s|’s)?\s+name\s*[:\-]"
         r"|[SDW]/o\b|(?:son|daughter|wife) of\b)", re.I)),
     ("photo", re.compile(r"^\s*(?:[-*•]\s*)?(?:\[?photo(?:graph)?\b)", re.I)),
+    ("pronouns_field", re.compile(r"^\s*(?:[-*•]\s*)?(?:preferred\s+)?pronouns?\s*[:\-]", re.I)),
 ]
 
 BREAK_REASON = re.compile(
@@ -53,7 +54,11 @@ DATE_RANGE = re.compile(
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
 PROFILE = re.compile(
     r"(?:https?://)?(?:www\.)?(?:linkedin\.com|github\.com|gitlab\.com|twitter\.com|x\.com|"
-    r"facebook\.com|instagram\.com|medium\.com|kaggle\.com)/[\w\-./%]+", re.I)
+    r"facebook\.com|instagram\.com|medium\.com|kaggle\.com)/[\w\-./%]+"
+    r"|\b(?:https?://|www\.)[^\s|,;()]+", re.I)
+# Bare personal domains (e.g. priyaiyer.dev) are replaced when they contain the candidate's name
+DOMAIN = re.compile(r"\b[\w-]+(?:\.[\w-]+)*\.(?:dev|io|me|com|net|org|in|co|uk|site|page|app|tech|ai|blog)"
+                    r"(?:/[^\s|,;()]*)?\b", re.I)
 
 INST_WORD = r"(?:College|University|Institute|School|Academy|Polytechnic|Vidyalaya|Mahavidyalaya)"
 CAP = r"[A-Z][\w.'’&-]*"
@@ -61,7 +66,15 @@ INSTITUTION = re.compile(
     rf"(?:University|Institute|College|Academy) of {CAP}(?:\s+(?:and\s+)?{CAP}){{0,3}}"
     rf"|(?:{CAP}\s+){{1,6}}{INST_WORD}\b(?:\s+(?:of|for)(?:\s+(?:and\s+)?{CAP}){{1,4}})?")
 GENDERED_INST = re.compile(r"\b(?:women|men|girls|boys|ladies)(?:'s|’s|'|’|s)?\b|\bfor (?:women|men|girls|boys)\b", re.I)
-EDUCATION_HEADINGS = re.compile(r"^(?:EDUCATION|QUALIFICATIONS?|ACADEMIC.*|EDUCATIONAL.*)$", re.I)
+EDUCATION_HEADINGS = re.compile(r"^(?:EDUCATION|QUALIFICATION|ACADEMIC)", re.I)
+# Section headings that are not written in capitals ("Work Experience", "Education & Training")
+SECTION_NAMES = re.compile(
+    r"^(?:profile|(?:professional |personal |career )?summary|(?:career )?objective|about me|"
+    r"(?:work |professional |relevant )?experience|employment(?: history)?|work history|career history|"
+    r"education(?:al)?(?: (?:and|&) \w+| qualifications| background)?|qualifications|academic \w+|"
+    r"(?:technical |key |core )?skills(?: (?:and|&) \w+)?|interests|(?:extra-curricular )?activities|"
+    r"hobbies(?: (?:and|&) interests)?|leadership(?: (?:and|&) activities)?|personal (?:details|information)|"
+    r"declaration|projects|certifications?|achievements|awards|languages|references|volunteering)$", re.I)
 
 # Named organisations whose name is a gender marker
 ORGANISATIONS = {
@@ -69,6 +82,7 @@ ORGANISATIONS = {
     "Women Who Code": "a coding community",
     "Lean In Circle": "a professional network",
 }
+GREEK = re.compile(r"\b(?:sorority|fraternity)\b", re.I)
 WOMEN_IN = re.compile(r"\bWomen in (?=[A-Z])")
 # Possessive forms ("Women's Cricket Team") anywhere, and plain gender words
 # only inside the name of a team or society ("Ladies Hockey Club").
@@ -83,6 +97,7 @@ GENDERED_JOBS = {
     "chairwomen": "chairpersons", "salesman": "salesperson", "saleswoman": "salesperson",
     "salesgirl": "salesperson", "salesmen": "salespeople", "saleswomen": "salespeople",
     "waitress": "server", "waiter": "server", "waitresses": "servers", "waiters": "servers",
+    "hostess": "server", "hostesses": "servers", "busboy": "server",
     "spokesman": "spokesperson", "spokeswoman": "spokesperson", "foreman": "supervisor",
     "forewoman": "supervisor", "businessman": "businessperson", "businesswoman": "businessperson",
     "policeman": "police officer", "policewoman": "police officer", "stewardess": "flight attendant",
@@ -133,8 +148,11 @@ def plural_verb(word):
 
 def is_heading(line):
     s = line.strip()
-    return bool(s) and len(s) <= 40 and s.upper() == s and re.search(r"[A-Z]", s) is not None \
-        and not s.startswith(("-", "*", "•"))
+    if not s or len(s) > 40 or s.startswith(("-", "*", "•", "[")):
+        return False
+    if s.upper() == s and re.search(r"[A-Z]", s):
+        return True
+    return bool(SECTION_NAMES.match(s.rstrip(":")))
 
 
 def name_from(lines):
@@ -220,6 +238,7 @@ def redact_text(text, cv_id="cv"):
     if bare_name:
         name_re = re.compile(rf"(?:\b{TITLES}\s+)?{re.escape(bare_name)}(?:'s|’s)?")
     token_re = re.compile(r"\b(" + "|".join(map(re.escape, tokens)) + r")\b") if tokens else None
+    lower_tokens = [t.lower() for t in tokens if len(t) >= 3]
 
     out = []
     section = ""
@@ -242,7 +261,7 @@ def redact_text(text, cv_id="cv"):
         # 2. career break: keep the dates, drop the stated reason
         if CAREER_BREAK.search(line) or (BREAK_REASON.search(line) and DATE_RANGE.search(line)
                                          and not re.search(r"maternity cover", line, re.I)
-                                         and re.search(r"\b(?:break|leave|career)\b", line, re.I)):
+                                         and re.search(r"\b(?:break|leave|career|sabbatical|gap)\b", line, re.I)):
             dates = DATE_RANGE.search(line)
             sep = " | " if "|" in line else ", "
             new = "Career break" + (sep + dates.group(0) if dates else "")
@@ -266,6 +285,14 @@ def redact_text(text, cv_id="cv"):
         for m in PROFILE.findall(new):
             log(n, m, "[PROFILE]", "profile_link")
         new = PROFILE.sub("[PROFILE]", new)
+
+        def personal_domain(m):
+            if any(t in m.group(0).lower() for t in lower_tokens):
+                log(n, m.group(0), "[PROFILE]", "profile_link")
+                return "[PROFILE]"
+            return m.group(0)
+        if lower_tokens:
+            new = DOMAIN.sub(personal_domain, new)
 
         # 4. name (with any title), then remaining name tokens
         if name_re:
@@ -296,6 +323,9 @@ def redact_text(text, cv_id="cv"):
             if org.lower() in new.lower():
                 log(n, org, repl, "gendered_organisation")
                 new = re.sub(re.escape(org), repl, new, flags=re.I)
+        for m in GREEK.findall(new):
+            log(n, m, "student society", "gendered_organisation")
+        new = GREEK.sub("student society", new)
         for m in WOMEN_IN.findall(new):
             log(n, m.strip(), "", "gendered_qualifier")
         new = WOMEN_IN.sub("", new)
@@ -351,14 +381,22 @@ def redact_folder(input_dir, output_dir, log_path=None):
         "files_redacted": len(files),
         "changes": len(all_changes),
         "changes_by_rule": dict(Counter(c["rule"] for c in all_changes).most_common()),
-        "output": str(output_dir),
+        "output": _shown(output_dir),
     }
     if log_path:
         Path(log_path).parent.mkdir(parents=True, exist_ok=True)
         Path(log_path).write_text(json.dumps({"summary": summary, "changes": all_changes}, indent=2),
                                   encoding="utf-8")
-        summary["log"] = str(log_path)
+        summary["log"] = _shown(log_path)
     return summary
+
+
+def _shown(path):
+    """Path relative to the current folder when possible, so logs carry no personal folder names."""
+    try:
+        return Path(path).resolve().relative_to(Path.cwd().resolve()).as_posix()
+    except ValueError:
+        return Path(path).name
 
 
 def main():

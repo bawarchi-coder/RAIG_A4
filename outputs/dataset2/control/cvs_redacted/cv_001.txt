@@ -1,0 +1,30 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900921
+
+SUMMARY
+I am a software developer with 4 years of experience building telecom billing. I have shipped features used by thousands of customers and I enjoy clean, well-tested code.
+
+EXPERIENCE
+Software Engineer (Part-time, 0.6 FTE) | Corelight Payments | March 2024 – Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+- Packaged services with Docker
+Career break | June 2023 – February 2024
+Associate Developer | Quantara Labs | May 2021 – May 2023
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+- Worked in two-week Agile sprints
+
+EDUCATION
+BSc Mathematics and Computing, [INSTITUTION], 2020 (First Class)
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker
+
+LEADERSHIP & ACTIVITIES
+- Member, basketball team
+- Volunteer, a coding community
+- Contributor to open-source projects

@@ -1,0 +1,196 @@
+[
+  {
+    "dataset": "dataset1",
+    "role": "Data Analyst",
+    "tool": "screener_a",
+    "tool_label": "Screener A: legacy command-line tool",
+    "out_dir": "outputs/screener_a",
+    "leaks": 0,
+    "redaction_changes": 355,
+    "raw": {
+      "men": "8/15",
+      "women": "2/15",
+      "impact_ratio": 0.25,
+      "four_fifths": "FAIL",
+      "fisher_p": 0.0502,
+      "twins": "0/5",
+      "penalties": {
+        "career_gap": 10.0
+      },
+      "recommendation": "Do not use this shortlist"
+    },
+    "redacted": {
+      "men": "6/15",
+      "women": "4/15",
+      "impact_ratio": 0.6667,
+      "four_fifths": "FAIL",
+      "fisher_p": 0.6999,
+      "twins": "5/5",
+      "penalties": {
+        "career_gap": 10.0
+      },
+      "recommendation": "Do not use this shortlist"
+    }
+  },
+  {
+    "dataset": "dataset1",
+    "role": "Data Analyst",
+    "tool": "screener_a_control",
+    "tool_label": "Screener A with hidden rules switched off (control)",
+    "out_dir": "outputs/control",
+    "leaks": 0,
+    "redaction_changes": 355,
+    "raw": {
+      "men": "5/15",
+      "women": "5/15",
+      "impact_ratio": 1.0,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "5/5",
+      "penalties": {},
+      "recommendation": "Proceed with conditions"
+    },
+    "redacted": {
+      "men": "5/15",
+      "women": "5/15",
+      "impact_ratio": 1.0,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "5/5",
+      "penalties": {},
+      "recommendation": "Proceed with conditions"
+    }
+  },
+  {
+    "dataset": "dataset1",
+    "role": "Data Analyst",
+    "tool": "vendor_b",
+    "tool_label": "Vendor B TalentRank: cloud service over HTTP",
+    "out_dir": "outputs/vendor_b",
+    "leaks": 0,
+    "redaction_changes": 355,
+    "raw": {
+      "men": "6/15",
+      "women": "4/15",
+      "impact_ratio": 0.6667,
+      "four_fifths": "FAIL",
+      "fisher_p": 0.6999,
+      "twins": "5/5",
+      "penalties": {
+        "career_gap": 12.0,
+        "part_time": 8.0
+      },
+      "recommendation": "Do not use this shortlist"
+    },
+    "redacted": {
+      "men": "6/15",
+      "women": "4/15",
+      "impact_ratio": 0.6667,
+      "four_fifths": "FAIL",
+      "fisher_p": 0.6999,
+      "twins": "5/5",
+      "penalties": {
+        "career_gap": 12.0,
+        "part_time": 8.0
+      },
+      "recommendation": "Do not use this shortlist"
+    }
+  },
+  {
+    "dataset": "dataset2",
+    "role": "Software Developer",
+    "tool": "screener_a",
+    "tool_label": "Screener A: legacy command-line tool",
+    "out_dir": "outputs/dataset2/screener_a",
+    "leaks": 0,
+    "redaction_changes": 419,
+    "raw": {
+      "men": "10/24",
+      "women": "2/16",
+      "impact_ratio": 0.3,
+      "four_fifths": "FAIL",
+      "fisher_p": 0.0788,
+      "twins": "1/4",
+      "penalties": {
+        "career_gap": 9.14
+      },
+      "recommendation": "Do not use this shortlist"
+    },
+    "redacted": {
+      "men": "7/24",
+      "women": "5/16",
+      "impact_ratio": 0.9334,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "4/4",
+      "penalties": {
+        "career_gap": 8.57
+      },
+      "recommendation": "Proceed with conditions"
+    }
+  },
+  {
+    "dataset": "dataset2",
+    "role": "Software Developer",
+    "tool": "screener_a_control",
+    "tool_label": "Screener A with hidden rules switched off (control)",
+    "out_dir": "outputs/dataset2/control",
+    "leaks": 0,
+    "redaction_changes": 419,
+    "raw": {
+      "men": "7/24",
+      "women": "5/16",
+      "impact_ratio": 0.9334,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "4/4",
+      "penalties": {},
+      "recommendation": "Proceed with conditions"
+    },
+    "redacted": {
+      "men": "7/24",
+      "women": "5/16",
+      "impact_ratio": 0.9334,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "4/4",
+      "penalties": {},
+      "recommendation": "Proceed with conditions"
+    }
+  },
+  {
+    "dataset": "dataset2",
+    "role": "Software Developer",
+    "tool": "vendor_b",
+    "tool_label": "Vendor B TalentRank: cloud service over HTTP",
+    "out_dir": "outputs/dataset2/vendor_b",
+    "leaks": 0,
+    "redaction_changes": 419,
+    "raw": {
+      "men": "7/24",
+      "women": "5/16",
+      "impact_ratio": 0.9334,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "4/4",
+      "penalties": {
+        "career_gap": 10.29,
+        "part_time": 8.0
+      },
+      "recommendation": "Proceed with conditions"
+    },
+    "redacted": {
+      "men": "7/24",
+      "women": "5/16",
+      "impact_ratio": 0.9334,
+      "four_fifths": "PASS",
+      "fisher_p": 1.0,
+      "twins": "4/4",
+      "penalties": {
+        "career_gap": 10.29,
+        "part_time": 8.0
+      },
+      "recommendation": "Proceed with conditions"
+    }
+  }
+]

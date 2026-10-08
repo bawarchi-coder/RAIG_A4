@@ -1,0 +1,105 @@
+{
+  "candidates": 40,
+  "shortlist_size": 12,
+  "groups": {
+    "female": {
+      "candidates": 16,
+      "shortlisted": 2,
+      "selection_rate": 0.125,
+      "mean_score": 44.71
+    },
+    "male": {
+      "candidates": 24,
+      "shortlisted": 10,
+      "selection_rate": 0.4167,
+      "mean_score": 61.86
+    }
+  },
+  "higher_rate_group": "male",
+  "lower_rate_group": "female",
+  "impact_ratio": 0.3,
+  "four_fifths_threshold": 0.8,
+  "four_fifths": "FAIL",
+  "fisher_exact_p": 0.0788,
+  "mean_score_gap_men_minus_women": 17.15,
+  "twin_test": {
+    "pairs": 4,
+    "identical": 1,
+    "details": [
+      {
+        "pair": "T1",
+        "man": "cv_036",
+        "woman": "cv_023",
+        "score_man": 98.2,
+        "score_woman": 76.2,
+        "difference_man_minus_woman": 22.0,
+        "identical": false
+      },
+      {
+        "pair": "T2",
+        "man": "cv_033",
+        "woman": "cv_006",
+        "score_man": 84.0,
+        "score_woman": 62.0,
+        "difference_man_minus_woman": 22.0,
+        "identical": false
+      },
+      {
+        "pair": "T3",
+        "man": "cv_019",
+        "woman": "cv_022",
+        "score_man": 59.2,
+        "score_woman": 59.2,
+        "difference_man_minus_woman": 0.0,
+        "identical": true
+      },
+      {
+        "pair": "T4",
+        "man": "cv_040",
+        "woman": "cv_025",
+        "score_man": 44.7,
+        "score_woman": 33.7,
+        "difference_man_minus_woman": 11.0,
+        "identical": false
+      }
+    ]
+  },
+  "sample_size_warning": "Fewer than 30 candidates in at least one group. Treat these results as indicative, not conclusive.",
+  "proxy_signals": {
+    "career_gap": {
+      "cvs_with_signal": 7,
+      "by_gender": {
+        "female": 5,
+        "male": 2
+      },
+      "shortlisted_with_signal": 2,
+      "selection_rate_with_signal": 0.2857,
+      "selection_rate_without_signal": 0.303,
+      "cv_ids": [
+        "cv_001",
+        "cv_005",
+        "cv_013",
+        "cv_015",
+        "cv_016",
+        "cv_017",
+        "cv_031"
+      ]
+    },
+    "part_time": {
+      "cvs_with_signal": 4,
+      "by_gender": {
+        "female": 3,
+        "male": 1
+      },
+      "shortlisted_with_signal": 0,
+      "selection_rate_with_signal": 0.0,
+      "selection_rate_without_signal": 0.3333,
+      "cv_ids": [
+        "cv_001",
+        "cv_008",
+        "cv_011",
+        "cv_021"
+      ]
+    }
+  }
+}

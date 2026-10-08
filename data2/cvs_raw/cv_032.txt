@@ -1,0 +1,28 @@
+Yash Thakur
+yash.thakur@example.org | +44 7700 900699 | www.yashthakur.dev
+
+Profile
+I am a software developer with 3 years of experience building media streaming services. I have shipped features used by thousands of customers and I enjoy improving developer tooling.
+
+Work Experience
+Software Engineer, Velvetline Software | 11/2024 – present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Software Engineering Intern, Tidewater Digital | 04/2023 – 10/2024
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+- Worked in two-week Agile sprints
+
+Education
+BCA, Easterbrook University, 2022 (CGPA 8.2/10)
+
+Technical Skills
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile
+
+Interests
+- Men's badminton team
+- Volunteer, Code Club
+- Contributor to open-source projects

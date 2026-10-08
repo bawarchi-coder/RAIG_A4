@@ -52,10 +52,10 @@ The skill follows the open [Agent Skills](https://agentskills.io) format, so the
 ## 2. As a standalone app
 
 ```
-.venv\Scripts\streamlit run app.py
+.venv\Scripts\streamlit run app.py --server.address 127.0.0.1
 ```
 
-Choose a screening tool in the sidebar and press **Run fairness check**. Tabs: the existing tool on raw CVs, redaction (each CV before and after, with changes highlighted), blind screening, proxy probe, the report, a "Try it" box to redact any pasted CV, and a comparison of all tools run. A bookmark such as `http://127.0.0.1:8501/?run=vendor_b` runs a tool on load. The app only listens on 127.0.0.1 (see `.streamlit/config.toml`).
+Choose a candidate pool and a screening tool in the sidebar and press **Run fairness check** ([GUIDE.md](GUIDE.md) explains every option). Tabs: the existing tool on raw CVs, redaction (each CV before and after, with changes highlighted), blind screening, proxy probe, the report, a "Try it" box to redact any pasted CV, and a comparison of all tools run. A bookmark such as `http://127.0.0.1:8501/?run=vendor_b&dataset=set2` runs a tool on load. `--server.address 127.0.0.1` (also used by `start_demo.bat`) keeps the local app reachable from this computer only.
 
 ## 3. Integration with existing HR software
 
@@ -90,7 +90,9 @@ Tools are registered on the server in `integration/screeners.json`. API callers 
 | **Screener A, control** (`--no-bias`) | command line | Nothing: keyword and experience scoring only |
 | **Vendor B** (`demo/screener_service.py`) | HTTP | Claims to be gender-blind and never reads names or pronouns, but −12 per career gap and −8 for part-time work |
 
-## Results on the demo data (30 CVs, 15 women, 15 men, shortlist of 10)
+## Results
+
+**Dataset 1: Data Analyst** (30 CVs, 15 women, 15 men, 5 twin pairs, shortlist of 10)
 
 | Tool | CVs | Shortlisted (men / women) | Impact ratio | Twin pairs identical | Proxy probe | Recommendation |
 |---|---|---|---|---|---|---|
@@ -98,6 +100,17 @@ Tools are registered on the server in `integration/screeners.json`. API callers 
 | Screener A | redacted | 6 / 4 | 0.67 FAIL | 5 / 5 | career break −10 | Do not use |
 | Control | redacted | 5 / 5 | 1.00 PASS | 5 / 5 | none | Proceed with conditions (small sample) |
 | Vendor B | raw or redacted | 6 / 4 | 0.67 FAIL | 5 / 5 | career break −12, part-time −8 | Do not use |
+
+**Dataset 2: Software Developer** (40 CVs, 16 women, 24 men, 4 twin pairs, shortlist of 12)
+
+| Tool | CVs | Shortlisted (men / women) | Impact ratio | Twin pairs identical | Proxy probe | Recommendation |
+|---|---|---|---|---|---|---|
+| Screener A | raw | 10 / 2 | 0.30 FAIL | 1 / 4 | career break −8.6 | Do not use |
+| Screener A | redacted | 7 / 5 | 0.93 PASS | 4 / 4 | career break −8.6 | Proceed with conditions |
+| Control | redacted | 7 / 5 | 0.93 PASS | 4 / 4 | none | Proceed with conditions (small sample) |
+| Vendor B | raw or redacted | 7 / 5 | 0.93 PASS | 4 / 4 | career break −10.3, part-time −8 | Proceed with conditions |
+
+On dataset 2 the redacted shortlist passes the four-fifths rule, yet the probe shows the tool still penalises career breaks. A rate threshold on its own would have called it fair. The probe's mean penalty is below 10 because one break (a 3-month paternity leave) is under the 6-month threshold and was correctly not penalised.
 
 What this shows:
 
@@ -110,10 +123,37 @@ Saved reports: `outputs/screener_a/`, `outputs/control/`, `outputs/vendor_b/` (`
 
 `outputs/data_analyst/` is a full run by the agent in a fresh Claude Code session (plan Step 9), started from the natural-language prompt above. The skill loaded by itself, ran all six stages, did not open the screener's code, produced rankings and audit figures identical to `outputs/screener_a/`, and added its own observations under "Reviewer notes" in both reports.
 
+## Second dataset: a robustness test
+
+`demo/make_cvs_set2.py` builds a pool the code was not designed around: a different role, an unbalanced pool, three CV layouts (UK-style, Indian biodata, US résumé), dates such as `03/2021`, labels written F/M, and new markers ("Pronouns: she/her", "née", "Head Girl", "Hostess", sororities and fraternities, personal websites containing the name, a sabbatical for caring, an unexplained gap). It was run **before any code was changed** and exposed five gaps:
+
+| Gap found | Effect | Fix |
+|---|---|---|
+| Personal websites containing the name (`www.edwardwade.dev`) | Names leaked on 13 CVs; the leak check missed them too | Redact any web address, and any domain containing a name; the leak check now looks for names inside links |
+| Title Case section headings ("Education") not recognised | Ordinary universities kept their names while women's colleges became `[INSTITUTION]`, so the placeholder pointed to women again | Headings recognised by name, in any case |
+| Dates written `03/2021`, `June 2019` or `2019` | Experience and career gaps on those CVs were invisible | Shared date parser handles all four forms; the probe keeps each CV's own date style |
+| Labels written F/M | The audit mixed up which group was men | Labels normalised (F, Female, woman … → female) |
+| Sorority, fraternity, Hostess, "Sabbatical (caring for family)" | Gender words survived (the leak check caught the first two) | New redaction rules |
+
+After the fixes both datasets show zero leaks, and dataset 1's results are identical to before. Two one-sided terms remain on purpose: men volunteer at "Code Club" while women's "Women Who Code" becomes "a coding community". That is a different activity, so it is flagged for a human rather than hidden.
+
+## Public demo links
+
+- **Static demo page** (results for both datasets and all tools, every CV before and after): published as a claude.ai Artifact. It is private until the owner opens it and uses **Share** to give access or a public link. The same page is in `docs/index.html`, so it can also be served by **GitHub Pages** (repository Settings → Pages → Deploy from branch `main`, folder `/docs`).
+- **Live app on Streamlit Community Cloud**: push this repository to GitHub, sign in at share.streamlit.io with GitHub, choose **Create app**, pick the repository, branch `main` and main file `app.py`, and deploy. The app picks its dataset from a dropdown, uses a separate working folder per visitor, and runs Vendor B from its offline copy when the web service is not available.
+
 ## Re-running from scratch
 
 ```
 python demo/make_cvs.py
+python demo/make_cvs_set2.py
+python demo/run_all_scenarios.py      # every dataset x tool, plus outputs/summary.json
+python demo/build_demo_page.py        # site/demo.html and docs/index.html
+```
+
+One scenario by hand:
+
+```
 python ".claude/skills/gender-fair-screening/scripts/pipeline.py" --raw data/cvs_raw --jd data/job_description.md ^
   --labels data/gender_labels.csv --out outputs/screener_a --tool-name "Screener A" ^
   --cmd "python demo/biased_screener.py --cvs {cvs} --jd {jd} --out {out} --top-k {top_k}"
@@ -123,12 +163,15 @@ python ".claude/skills/gender-fair-screening/scripts/pipeline.py" --raw data/cvs
 
 ```
 .claude/skills/gender-fair-screening/   the skill: SKILL.md, scripts/, references/, templates/
-data/                                   job description, raw and redacted CVs, gender labels
-demo/                                   CV generator, Screener A, Vendor B service, answer key
+data/                                   dataset 1: job description, raw and redacted CVs, gender labels
+data2/                                  dataset 2 (robustness test), same layout
+demo/                                   CV generators, Screener A, Vendor B, answer keys, run-all and page builder
 integration/                            HTTP API, screener registry, example HR-system client
-outputs/                                rankings, logs and audit reports
+outputs/                                rankings, logs and audit reports (dataset 2 in outputs/dataset2/)
+site/, docs/                            the static demo page (Artifact body, GitHub Pages copy)
 app.py                                  standalone app
 start_demo.bat                          starts the services for a demo
+GUIDE.md                                plain-language guide to the app's options and results
 PROJECT_PLAN.md                         the original plan
 ```
 

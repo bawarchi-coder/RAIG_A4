@@ -1,0 +1,47 @@
+CURRICULUM VITAE
+
+Name: Chirag Malhotra
+S/o Shri Dinesh Malhotra
+Email: chirag.malhotra96@example.com
+Mobile: +44 7700 900714
+
+CAREER OBJECTIVE
+He is a software developer with 5 years of experience building banking apps. He has shipped features used by thousands of customers. His colleagues value his calm approach. He enjoys improving developer tooling.
+
+PROFESSIONAL EXPERIENCE
+Software Developer at Corelight Payments | Jul 2024 - Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Paternity leave | Apr 2024 - Jun 2024
+Junior Developer at Northlake Digital | Apr 2022 - Mar 2024
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+Software Engineering Intern at Orchard Logic | Nov 2020 - Mar 2022
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+EDUCATIONAL QUALIFICATIONS
+BTech Information Technology, Delbridge College, 2020 (CGPA 8.4/10)
+A levels / Class XII, Oakfield School, 2017: Head Boy
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React
+
+EXTRA-CURRICULAR ACTIVITIES
+- Volunteer, Code Club
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Sex: Male
+Age: 27 years
+Marital Status: Unmarried
+Nationality: Indian
+[Photograph attached]
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.
+(Chirag Malhotra)

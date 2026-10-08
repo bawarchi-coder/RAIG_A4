@@ -1,0 +1,27 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900667
+
+SUMMARY
+I am a software developer with 3 years of experience building media streaming services. I have shipped features used by thousands of customers and I enjoy improving developer tooling.
+
+EXPERIENCE
+Software Engineer | Zephyra Cloud | November 2024 – Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Career break | September 2023 – October 2024
+Software Engineering Intern | Brightwire Systems | February 2022 – August 2023
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+- Worked in two-week Agile sprints
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile
+
+LEADERSHIP & ACTIVITIES
+- Member, basketball team
+- Server, Lakeside Restaurant (summer job)
+- Volunteer, a coding community
+- Contributor to open-source projects

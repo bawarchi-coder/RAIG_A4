@@ -7,7 +7,7 @@
 - [ ] In the app, also run **Vendor B** and **Screener A control** once, so the "All runs" tab is filled.
 - [ ] VS Code open on this folder, Claude Code panel open, font enlarged (Ctrl + =).
 - [ ] Editor tabs open: `SKILL.md`, `references/gender_markers.md`, `outputs/screener_a/audit_report_redacted.md`.
-- [ ] Backup: screen recording of a full run, and the saved reports in `outputs/`.
+- [ ] Backup: screen recording of a full run, the saved reports in `outputs/`, and the public demo page (shared from claude.ai), which works on any device with no setup.
 - [ ] Wi-Fi not needed for the app or API. Claude Code needs internet.
 
 ## 1. The problem (1 min)
@@ -44,6 +44,7 @@ Narrate as it goes: redaction → leak check → blind screening → audit → p
 - "Comparing rates alone would have missed it: people with breaks were shortlisted at the same rate as people without."
 - Reveal: open `demo/biased_screener.py` and show the hidden rule `score -= 10 * len(gaps(jobs))`. "Blind screening helped, but only the audit caught this."
 - **Vendor B** (sidebar → Vendor B → Run): "This vendor claims to be gender-blind, and the twin test agrees. It still fails at 0.67: it penalises career breaks and part-time work. Redaction does nothing against that; the probe catches it."
+- **Dataset 2** (sidebar → Candidate pool → Dataset 2, Screener A → Run): "A second, harder pool we built to test the code. After redaction this shortlist *passes* the 80% rule, 0.93, and yet the probe shows breaks still cost 8.6 points. That is why the report says 'proceed with conditions', not 'fair'. And running this pool first found five real gaps in our own code, which we fixed."
 
 ## 6. Plugs into existing software (1 min): Swagger tab
 

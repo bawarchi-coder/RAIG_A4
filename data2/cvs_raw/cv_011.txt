@@ -1,0 +1,40 @@
+CURRICULUM VITAE
+
+Name: Ms. Jasmine Yadav
+D/o Shri Ramesh Yadav
+Email: jasmine.yadav19@example.com
+Mobile: +44 7700 900827
+
+CAREER OBJECTIVE
+She is a software developer with 2 years of experience building public sector websites. She has shipped features used by thousands of customers. Her colleagues value her calm approach. She enjoys fixing hard bugs.
+
+PROFESSIONAL EXPERIENCE
+Full Stack Developer (Part-time) at Kitewing Labs | Oct 2024 - Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+- Fixed front-end bugs in JavaScript
+- Designed a REST API for partner integrations
+
+EDUCATIONAL QUALIFICATIONS
+BCA, Marchwood University, 2024 (CGPA 7.5/10)
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, Women's basketball team
+- Hostess, Lakeside Restaurant (summer job)
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Sex: Female
+Age: 23 years
+Marital Status: Unmarried
+Nationality: Indian
+[Photograph attached]
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.
+(Jasmine Yadav)

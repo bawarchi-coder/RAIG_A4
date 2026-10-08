@@ -1,0 +1,28 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900508 | [PROFILE]
+
+Profile
+They are a software developer with 3 years of experience building insurance quote engines. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy working closely with designers.
+
+Work Experience
+Full Stack Developer (part time), Ironbark Systems | 02/2025 – present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Trainee Programmer, Pinecrest Solutions | 10/2023 – 01/2025
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+
+Education
+BSc Physics, [INSTITUTION], 2023 (Upper Second (2:1))
+
+Technical Skills
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing
+
+Interests
+- badminton team
+- Server, Lakeside Restaurant (summer job)
+- Volunteer, a coding community
+- Contributor to open-source projects

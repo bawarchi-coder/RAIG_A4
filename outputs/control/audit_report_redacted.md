@@ -1,6 +1,6 @@
 # Gender Fairness Audit: Data Analyst
 
-**Date:** 2026-10-07 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** Screener A with hidden rules switched off (control) &nbsp; **CVs screened:** redacted
+**Date:** 2026-10-08 &nbsp; **Candidates:** 30 &nbsp; **Shortlist size:** 10 &nbsp; **Screening tool:** Screener A with hidden rules switched off (control) &nbsp; **CVs screened:** redacted
 
 ## Recommendation
 **Proceed with conditions**

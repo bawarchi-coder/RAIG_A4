@@ -1,0 +1,22 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900416
+
+SUMMARY
+I am a software developer with 1 year of experience building food delivery apps. I have shipped features used by thousands of customers and I enjoy improving developer tooling.
+
+EXPERIENCE
+Full Stack Developer | Tidewater Digital | February 2025 – Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+- Fixed front-end bugs in JavaScript
+
+EDUCATION
+BSc Information Systems, [INSTITUTION], 2024 (Upper Second (2:1))
+
+SKILLS
+Python, SQL, Git, Java, JavaScript
+
+LEADERSHIP & ACTIVITIES
+- Contributor to open-source projects

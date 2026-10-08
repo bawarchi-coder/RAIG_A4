@@ -1,0 +1,106 @@
+{
+  "cvs_probed": 40,
+  "summary": {
+    "career_gap": {
+      "cvs_tested": 7,
+      "cvs_penalised": 6,
+      "mean_penalty_points": 8.57
+    },
+    "part_time": {
+      "cvs_tested": 4,
+      "cvs_penalised": 0,
+      "mean_penalty_points": 0.0
+    }
+  },
+  "tests": [
+    {
+      "cv_id": "cv_001",
+      "signal": "career_gap",
+      "score_with_signal": 58.3,
+      "score_without_signal": 68.3,
+      "change": 10.0,
+      "penalised": true
+    },
+    {
+      "cv_id": "cv_001",
+      "signal": "part_time",
+      "score_with_signal": 58.3,
+      "score_without_signal": 58.3,
+      "change": 0.0,
+      "penalised": false
+    },
+    {
+      "cv_id": "cv_005",
+      "signal": "career_gap",
+      "score_with_signal": 78.3,
+      "score_without_signal": 78.3,
+      "change": 0.0,
+      "penalised": false
+    },
+    {
+      "cv_id": "cv_008",
+      "signal": "part_time",
+      "score_with_signal": 40.8,
+      "score_without_signal": 40.8,
+      "change": 0.0,
+      "penalised": false
+    },
+    {
+      "cv_id": "cv_011",
+      "signal": "part_time",
+      "score_with_signal": 40.0,
+      "score_without_signal": 40.0,
+      "change": 0.0,
+      "penalised": false
+    },
+    {
+      "cv_id": "cv_013",
+      "signal": "career_gap",
+      "score_with_signal": 56.7,
+      "score_without_signal": 66.7,
+      "change": 10.0,
+      "penalised": true
+    },
+    {
+      "cv_id": "cv_015",
+      "signal": "career_gap",
+      "score_with_signal": 47.5,
+      "score_without_signal": 57.5,
+      "change": 10.0,
+      "penalised": true
+    },
+    {
+      "cv_id": "cv_016",
+      "signal": "career_gap",
+      "score_with_signal": 88.3,
+      "score_without_signal": 98.3,
+      "change": 10.0,
+      "penalised": true
+    },
+    {
+      "cv_id": "cv_017",
+      "signal": "career_gap",
+      "score_with_signal": 75.8,
+      "score_without_signal": 85.8,
+      "change": 10.0,
+      "penalised": true
+    },
+    {
+      "cv_id": "cv_021",
+      "signal": "part_time",
+      "score_with_signal": 50.0,
+      "score_without_signal": 50.0,
+      "change": 0.0,
+      "penalised": false
+    },
+    {
+      "cv_id": "cv_031",
+      "signal": "career_gap",
+      "score_with_signal": 38.3,
+      "score_without_signal": 48.3,
+      "change": 10.0,
+      "penalised": true
+    }
+  ],
+  "finding": "The screener penalises: career_gap. Ask whether there is a job-related reason; if not, the penalty must be removed."
+}

@@ -1,0 +1,21 @@
+Aditi Agarwal (née Hale)
+aditi.agarwal@example.org | +44 7700 900820
+
+Profile
+I am a software developer with 1 year of experience building HR software. I have shipped features used by thousands of customers and I enjoy clean, well-tested code.
+
+Work Experience
+Full Stack Developer, Quantara Labs | 10/2025 – present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+
+Education
+BSc Mathematics, Marchwood University, 2025 (Upper Second (2:1))
+
+Technical Skills
+Python, SQL, Git
+
+Interests
+- Ladies' badminton team
+- Contributor to open-source projects

@@ -1,0 +1,32 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900399
+
+CAREER OBJECTIVE
+I am a software developer with 2 years of experience building warehouse robotics software. I have shipped features used by thousands of customers and I enjoy clean, well-tested code.
+
+PROFESSIONAL EXPERIENCE
+Backend Developer at Corelight Payments | Mar 2025 - Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+- Raised unit testing coverage from 40% to 85%
+Associate Developer at Zephyra Cloud | Dec 2023 - Feb 2025
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, basketball team
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

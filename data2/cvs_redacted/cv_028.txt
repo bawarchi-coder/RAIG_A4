@@ -1,0 +1,33 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900602 | [PROFILE]
+
+SUMMARY
+I am a software developer with 6 years of experience building logistics software. I have shipped features used by thousands of customers and I enjoy fixing hard bugs.
+
+EXPERIENCE
+Senior Software Engineer | Northlake Digital | April 2024 – Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Graduate Software Engineer | Corelight Payments | February 2022 – March 2024
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+- Deployed services on AWS Lambda and S3
+Trainee Programmer | Zephyra Cloud | August 2020 – January 2022
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+EDUCATION
+BSc Computer Science, [INSTITUTION], 2020 (First Class)
+A levels / Class XII, [INSTITUTION], 2017: School captain
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React, AWS
+
+LEADERSHIP & ACTIVITIES
+- Treasurer, university student society
+- Server, Lakeside Restaurant (summer job)
+- Contributor to open-source projects

@@ -1,0 +1,22 @@
+[CANDIDATE]
+[EMAIL] | +44 7700 900691
+
+SUMMARY
+I am a software developer with 1 year of experience building fintech dashboards. I have shipped features used by thousands of customers and I enjoy working closely with designers.
+
+EXPERIENCE
+Software Developer | Velvetline Software | June 2025 – Present
+- Built internal tools in Python
+- Optimised SQL queries for the orders service
+- Reviewed pull requests and managed release branches in Git
+- Maintained Java microservices for payments
+
+EDUCATION
+BTech Mechanical Engineering, [INSTITUTION], 2024 (CGPA 7.2/10)
+A levels / Class XII, [INSTITUTION], 2021: School captain
+
+SKILLS
+Python, SQL, Git, Java
+
+LEADERSHIP & ACTIVITIES
+- Contributor to open-source projects

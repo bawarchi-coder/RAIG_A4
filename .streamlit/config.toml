@@ -1,6 +1,7 @@
-# Streamlit settings for the demo app (app.py)
+# Streamlit settings for the demo app (app.py).
+# Local runs are restricted to this computer by start_demo.bat (--server.address 127.0.0.1);
+# that setting is not here so that the same app can also run on Streamlit Community Cloud.
 [server]
-address = "127.0.0.1"      # reachable from this computer only
 headless = true
 
 [browser]

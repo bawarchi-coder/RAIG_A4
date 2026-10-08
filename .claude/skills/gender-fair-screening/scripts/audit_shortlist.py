@@ -31,7 +31,7 @@ from math import comb
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cv_signals import signals  # noqa: E402
+from cv_signals import normalise_gender, signals  # noqa: E402
 
 FOUR_FIFTHS = 0.8
 MIN_GROUP = 30
@@ -58,7 +58,8 @@ def audit(ranking, labels, cv_texts=None):
 
     cv_texts: optional {cv_id: text} of the CVs that were screened.
     """
-    lab = {r["cv_id"]: r for r in labels}
+    # F/M, Female/Male, woman/man ... all become "female" / "male"
+    lab = {r["cv_id"]: {**r, "gender": normalise_gender(r["gender"])} for r in labels}
     rows = [r for r in ranking if r["cv_id"] in lab]
     missing = sorted({r["cv_id"] for r in ranking} - set(lab))
     groups = sorted({lab[r["cv_id"]]["gender"] for r in rows})

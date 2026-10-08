@@ -1,0 +1,40 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900987
+
+CAREER OBJECTIVE
+I am a software developer with 5 years of experience building healthcare booking systems. I have shipped features used by thousands of customers and I enjoy working closely with designers.
+
+PROFESSIONAL EXPERIENCE
+Software Developer at Corelight Payments | Oct 2024 - Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Associate Developer at Saltmarsh Software | Jan 2023 - Sep 2024
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+Trainee Programmer at Copperfield IT | Oct 2021 - Dec 2022
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+
+EDUCATIONAL QUALIFICATIONS
+BSc Computer Science, [INSTITUTION], 2021 (Upper Second (2:1))
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, basketball team
+- Volunteer, a coding community
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

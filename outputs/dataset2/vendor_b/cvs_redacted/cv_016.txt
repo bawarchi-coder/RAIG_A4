@@ -1,0 +1,43 @@
+CURRICULUM VITAE
+
+Name: [CANDIDATE]
+Email: [EMAIL]
+Mobile: +44 7700 900530
+
+CAREER OBJECTIVE
+They are a software developer with 7 years of experience building payment systems. They have shipped features used by thousands of customers. Their colleagues value their calm approach. They enjoy clean, well-tested code.
+
+PROFESSIONAL EXPERIENCE
+Senior Software Engineer at Copperfield IT | Sep 2023 - Present
+- Built internal tools in Python
+- Maintained Java microservices for payments
+- Raised unit testing coverage from 40% to 85%
+- Built React components for the customer portal
+Career break | Sep 2022 - Aug 2023
+Trainee Programmer at Tidewater Digital | Jan 2020 - Aug 2022
+- Optimised SQL queries for the orders service
+- Fixed front-end bugs in JavaScript
+- Worked in two-week Agile sprints
+- Deployed services on AWS Lambda and S3
+Software Engineering Intern at Quantara Labs | Feb 2018 - Dec 2019
+- Reviewed pull requests and managed release branches in Git
+- Designed a REST API for partner integrations
+- Packaged services with Docker
+- Set up CI/CD pipelines for automatic releases
+
+EDUCATIONAL QUALIFICATIONS
+MTech Computer Science, [INSTITUTION], 2017 (CGPA 9.1/10)
+
+KEY SKILLS
+Python, SQL, Git, Java, JavaScript, REST API, Unit testing, Agile, Docker, React, AWS, CI/CD
+
+EXTRA-CURRICULAR ACTIVITIES
+- Member, basketball team
+- Server, Lakeside Restaurant (summer job)
+- Contributor to open-source projects
+
+PERSONAL DETAILS
+Nationality: Indian
+
+DECLARATION
+I hereby declare that the above information is true to the best of my knowledge.

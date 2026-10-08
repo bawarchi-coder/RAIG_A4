@@ -1,0 +1,26 @@
+Liam Dutta
+liam.dutta@example.org | +44 7700 900650 | www.liamdutta.dev
+
+SUMMARY
+He is a software developer with 2 years of experience building mobile banking. He has shipped features used by thousands of customers. His colleagues value his calm approach. He enjoys mentoring new joiners.
+
+EXPERIENCE
+Backend Developer (Part-time) | Northlake Digital | August 2025 – Present
+- Built internal tools in Python
+- Reviewed pull requests and managed release branches in Git
+- Fixed front-end bugs in JavaScript
+Graduate Software Engineer | Ironbark Systems | August 2024 – July 2025
+- Optimised SQL queries for the orders service
+- Maintained Java microservices for payments
+- Designed a REST API for partner integrations
+
+EDUCATION
+BSc Mathematics, Marchwood University, 2024 (Upper Second (2:1))
+
+SKILLS
+Python, SQL, Git, Java, JavaScript, REST API
+
+LEADERSHIP & ACTIVITIES
+- Waiter, Lakeside Restaurant (summer job)
+- Volunteer, Code Club
+- Contributor to open-source projects
